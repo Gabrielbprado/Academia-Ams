@@ -48,11 +48,24 @@ namespace Academia_AMS
                 }
             }
 
-
-
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txt_Pesquisa.Text, out int cpf))
+            {
+                F_Excluir f_Excluir = new F_Excluir(cpf);
+                f_Excluir.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira um CPF válido.");
+            }
         }
 
-
-
-
     }
+
+}
+
+
+
+
+

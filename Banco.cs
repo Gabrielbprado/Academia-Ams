@@ -13,12 +13,12 @@ namespace Academia_AMS
     internal class Banco
     {
         private static SQLiteConnection connection;
-        
+
         public static SQLiteConnection OpenConnection()
         {
-                connection = new SQLiteConnection("Data Source = D:\\Academia_AMS\\Academia AMS\\Banco_Fitness\\Bd_Fit.db");   
-                connection.Open();
-                 return connection;
+            connection = new SQLiteConnection("Data Source = D:\\Academia_AMS\\Academia AMS\\Banco_Fitness\\Bd_Fit.db");
+            connection.Open();
+            return connection;
 
         }
 
@@ -30,12 +30,12 @@ namespace Academia_AMS
             try
             {
 
-                    using(var cmd = OpenConnection().CreateCommand())
+                using (var cmd = OpenConnection().CreateCommand())
                 {
                     cmd.CommandText = "SELECT * FROM fit_info";
-                    adapter = new SQLiteDataAdapter(cmd.CommandText,OpenConnection());
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
                     adapter.Fill(dataTable);
-                    OpenConnection().Close();
+                    
                     return dataTable;
                 }
 
@@ -43,6 +43,10 @@ namespace Academia_AMS
             catch (Exception ex)
             {
                 throw ex;
+                
+            }finally
+            {
+
                 OpenConnection().Close();
             }
 
@@ -58,10 +62,10 @@ namespace Academia_AMS
 
                 using (var cmd = OpenConnection().CreateCommand())
                 {
-                    cmd.CommandText = sql;                    
+                    cmd.CommandText = sql;
                     adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
                     adapter.Fill(dataTable);
-                    OpenConnection().Close();
+                   
                     return dataTable;
                 }
 
@@ -69,25 +73,29 @@ namespace Academia_AMS
             catch (Exception ex)
             {
                 throw ex;
+                
+            }finally
+            {
+
                 OpenConnection().Close();
             }
 
 
         }
 
-            ///informaçoes do usuario (Cadastro)
-        
-                      public static void NovoUsuario(Usuario u)
+        ///informaçoes do usuario (Cadastro)
+
+        public static void NovoUsuario(Usuario u)
         {
-                        if(VerificarNumber(u))
+            if (VerificarNumber(u))
             {
                 MessageBox.Show("Numero De Telefone Já Cadastrado");
                 return;
 
             }
-                        try
+            try
             {
-                    var cmd = OpenConnection().CreateCommand();
+                var cmd = OpenConnection().CreateCommand();
                 cmd.CommandText = "INSERT INTO fit_info (T_NAME, N_DATA, T_SERVICO, T_HORARIO, N_TELEFONE, T_OBS, N_CPF) VALUES (@nome, @data, @servico, @horario, @telefone, @obs, @cpf)";
 
                 cmd.Parameters.AddWithValue("@nome", u.T_NAME);
@@ -100,46 +108,53 @@ namespace Academia_AMS
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Usuario Cadastrado");
-                OpenConnection().Close();
+                
 
-            }       
+            }
 
             catch
             {
                 MessageBox.Show("Não Foi Possivel Adicionar O Usuario Tente Novamnte");
+               
+            }finally
+            {
                 OpenConnection().Close();
+
             }
-                
+
         }
 
-            //Rotinas Gerais
+        //Rotinas Gerais
 
         public static bool VerificarNumber(Usuario u)
         {
-           
-                bool resultado;
+
+            bool resultado;
             SQLiteDataAdapter adapter = null;
             DataTable dataTable = new DataTable();
 
-                using (var cmd = OpenConnection().CreateCommand())
-                {
-                    cmd.CommandText = "SELECT N_TELEFONE FROM fit_info WHERE N_TELEFONE ='"+u.N_TELEFONE+"'";
+            using (var cmd = OpenConnection().CreateCommand())
+            {
+                cmd.CommandText = "SELECT N_TELEFONE FROM fit_info WHERE N_TELEFONE ='" + u.N_TELEFONE + "'";
                 adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
-                    adapter.Fill(dataTable);
-                if(dataTable.Rows.Count>0)
+                adapter.Fill(dataTable);
+                if (dataTable.Rows.Count > 0)
                 {
-                        resultado = true;
-                }else
-                {
-                        resultado=false;
+                    resultado = true;
 
                 }
+                else
+                {
+                    resultado = false;
 
-                    
                 }
+                OpenConnection().Close();
 
-                return resultado;
             }
+
+            return resultado;
+
+        }
 
         public static Usuario ObterUsuarioPorCPF(int cpf)
         {
@@ -166,16 +181,69 @@ namespace Academia_AMS
 
                     return usuario;
                 }
-
+                OpenConnection().Close();
                 return null; // Retorna null se o usuário não for encontrado
             }
         }
 
+        public static void ExcluirUsuario(int cpf)
+        {
 
 
+          
+                try
+                {
+                    using (var connection = OpenConnection())
+                    {
+                        // Adiciona um pequeno atraso antes de abrir uma nova conexão
+                        System.Threading.Thread.Sleep(100);
+
+                        // Obtém o usuário antes de excluir para obter o nome
+                        Usuario usuario = ObterUsuarioPorCPF(cpf);
+
+                        DialogResult resultado = MessageBox.Show($"Deseja excluir o usuário: {usuario.T_NAME}?", "Confirmação", MessageBoxButtons.OKCancel);
+
+                        if (resultado == DialogResult.OK)
+                        {
+                            using (var cmd = connection.CreateCommand())
+                            {
+                                cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF = @cpf";
+                                cmd.Parameters.AddWithValue("@cpf", cpf);
+                                cmd.ExecuteNonQuery();
+                            }
+
+                            MessageBox.Show("Usuário excluído com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Operação Cancelada", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao excluir usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+          
+        
+        }
+                
+       }
 
 
 
 
     }
-}
+
+
+
+
+
+
+
+
+
+
+
+        
+    

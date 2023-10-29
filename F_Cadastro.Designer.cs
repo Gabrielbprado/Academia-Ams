@@ -126,6 +126,7 @@
             this.btn_Excluir.Size = new System.Drawing.Size(99, 82);
             this.btn_Excluir.TabIndex = 0;
             this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // btn_PESQUISAR
             // 

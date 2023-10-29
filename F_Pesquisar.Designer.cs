@@ -40,13 +40,11 @@
             this.txt_Data = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
             this.txt_Servico = new System.Windows.Forms.TextBox();
-            this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.txt_Id = new System.Windows.Forms.TextBox();
             this.LBL_HORARIO = new System.Windows.Forms.Label();
             this.LBL_DATA = new System.Windows.Forms.Label();
             this.lbl_Servico = new System.Windows.Forms.Label();
             this.lbl_Obs = new System.Windows.Forms.Label();
-            this.lbl_Cpf = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.LBL_iD = new System.Windows.Forms.Label();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
@@ -107,6 +105,7 @@
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btn_Excluir
             // 
@@ -129,24 +128,22 @@
             this.panel3.Controls.Add(this.txt_Data);
             this.panel3.Controls.Add(this.txt_Obs);
             this.panel3.Controls.Add(this.txt_Servico);
-            this.panel3.Controls.Add(this.txt_Cpf);
             this.panel3.Controls.Add(this.txt_Id);
             this.panel3.Controls.Add(this.LBL_HORARIO);
             this.panel3.Controls.Add(this.LBL_DATA);
             this.panel3.Controls.Add(this.lbl_Servico);
             this.panel3.Controls.Add(this.lbl_Obs);
-            this.panel3.Controls.Add(this.lbl_Cpf);
             this.panel3.Controls.Add(this.lbl_Nome);
             this.panel3.Controls.Add(this.LBL_iD);
             this.panel3.Location = new System.Drawing.Point(224, 266);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(817, 346);
+            this.panel3.Size = new System.Drawing.Size(817, 351);
             this.panel3.TabIndex = 9;
             // 
             // txt_Nome
             // 
             this.txt_Nome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Nome.Location = new System.Drawing.Point(114, 75);
+            this.txt_Nome.Location = new System.Drawing.Point(114, 77);
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(666, 20);
             this.txt_Nome.TabIndex = 1;
@@ -154,7 +151,7 @@
             // txt_Horario
             // 
             this.txt_Horario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Horario.Location = new System.Drawing.Point(565, 31);
+            this.txt_Horario.Location = new System.Drawing.Point(565, 33);
             this.txt_Horario.Name = "txt_Horario";
             this.txt_Horario.Size = new System.Drawing.Size(100, 20);
             this.txt_Horario.TabIndex = 1;
@@ -162,7 +159,7 @@
             // txt_Data
             // 
             this.txt_Data.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Data.Location = new System.Drawing.Point(335, 31);
+            this.txt_Data.Location = new System.Drawing.Point(335, 33);
             this.txt_Data.Name = "txt_Data";
             this.txt_Data.Size = new System.Drawing.Size(100, 20);
             this.txt_Data.TabIndex = 1;
@@ -170,7 +167,7 @@
             // txt_Obs
             // 
             this.txt_Obs.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Obs.Location = new System.Drawing.Point(123, 194);
+            this.txt_Obs.Location = new System.Drawing.Point(114, 201);
             this.txt_Obs.Multiline = true;
             this.txt_Obs.Name = "txt_Obs";
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
@@ -179,23 +176,15 @@
             // txt_Servico
             // 
             this.txt_Servico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Servico.Location = new System.Drawing.Point(415, 125);
+            this.txt_Servico.Location = new System.Drawing.Point(351, 126);
             this.txt_Servico.Name = "txt_Servico";
             this.txt_Servico.Size = new System.Drawing.Size(124, 20);
             this.txt_Servico.TabIndex = 1;
             // 
-            // txt_Cpf
-            // 
-            this.txt_Cpf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Cpf.Location = new System.Drawing.Point(114, 121);
-            this.txt_Cpf.Name = "txt_Cpf";
-            this.txt_Cpf.Size = new System.Drawing.Size(124, 20);
-            this.txt_Cpf.TabIndex = 1;
-            // 
             // txt_Id
             // 
             this.txt_Id.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Id.Location = new System.Drawing.Point(123, 34);
+            this.txt_Id.Location = new System.Drawing.Point(123, 36);
             this.txt_Id.Name = "txt_Id";
             this.txt_Id.Size = new System.Drawing.Size(100, 20);
             this.txt_Id.TabIndex = 1;
@@ -233,7 +222,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Servico.AutoSize = true;
             this.lbl_Servico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Servico.Location = new System.Drawing.Point(332, 122);
+            this.lbl_Servico.Location = new System.Drawing.Point(273, 124);
             this.lbl_Servico.Name = "lbl_Servico";
             this.lbl_Servico.Size = new System.Drawing.Size(72, 17);
             this.lbl_Servico.TabIndex = 0;
@@ -251,19 +240,6 @@
             this.lbl_Obs.Size = new System.Drawing.Size(41, 17);
             this.lbl_Obs.TabIndex = 0;
             this.lbl_Obs.Text = "OBS:";
-            // 
-            // lbl_Cpf
-            // 
-            this.lbl_Cpf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Cpf.AutoSize = true;
-            this.lbl_Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cpf.Location = new System.Drawing.Point(52, 128);
-            this.lbl_Cpf.Name = "lbl_Cpf";
-            this.lbl_Cpf.Size = new System.Drawing.Size(38, 17);
-            this.lbl_Cpf.TabIndex = 0;
-            this.lbl_Cpf.Text = "CPF:";
             // 
             // lbl_Nome
             // 
@@ -391,13 +367,11 @@
         private System.Windows.Forms.TextBox txt_Data;
         private System.Windows.Forms.TextBox txt_Obs;
         private System.Windows.Forms.TextBox txt_Servico;
-        private System.Windows.Forms.TextBox txt_Cpf;
         private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.Label LBL_HORARIO;
         private System.Windows.Forms.Label LBL_DATA;
         private System.Windows.Forms.Label lbl_Servico;
         private System.Windows.Forms.Label lbl_Obs;
-        private System.Windows.Forms.Label lbl_Cpf;
         private System.Windows.Forms.Label lbl_Nome;
         private System.Windows.Forms.Label LBL_iD;
         private System.Windows.Forms.Label Lbl_Titulo;
