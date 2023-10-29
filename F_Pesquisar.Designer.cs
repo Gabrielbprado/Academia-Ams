@@ -346,12 +346,13 @@
             // btn_Pesquisar
             // 
             this.btn_Pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pesquisar.Location = new System.Drawing.Point(490, 198);
+            this.btn_Pesquisar.Location = new System.Drawing.Point(528, 192);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
             this.btn_Pesquisar.Size = new System.Drawing.Size(237, 47);
             this.btn_Pesquisar.TabIndex = 10;
             this.btn_Pesquisar.Text = "Pesquisar";
             this.btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
             // F_Pesquisar
             // 

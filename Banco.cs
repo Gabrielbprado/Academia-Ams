@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data.Entity;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Academia_AMS
 {
@@ -15,7 +16,7 @@ namespace Academia_AMS
         
         public static SQLiteConnection OpenConnection()
         {
-                connection = new SQLiteConnection("Data Source = D:\\BancoTreino\\Banco\\Banco.db");   
+                connection = new SQLiteConnection("Data Source = D:\\Academia_AMS\\Academia AMS\\Banco_Fitness\\Bd_Fit.db");   
                 connection.Open();
                  return connection;
 
@@ -57,7 +58,8 @@ namespace Academia_AMS
 
                 using (var cmd = OpenConnection().CreateCommand())
                 {
-                    cmd.CommandText = sql;                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
+                    cmd.CommandText = sql;                    
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
                     adapter.Fill(dataTable);
                     OpenConnection().Close();
                     return dataTable;
@@ -73,7 +75,76 @@ namespace Academia_AMS
 
         }
 
-            
+            ///informaçoes do usuario (Cadastro)
+        
+                      public static void NovoUsuario(Usuario u)
+        {
+                        if(VerificarNumber(u))
+            {
+                MessageBox.Show("Numero De Telefone Já Cadastrado");
+                return;
+
+            }
+                        try
+            {
+                    var cmd = OpenConnection().CreateCommand();
+                cmd.CommandText = "INSERT INTO fit_info (T_NAME, N_DATA, T_SERVICO, T_HORARIO, N_TELEFONE, T_OBS, N_CPF) VALUES (@nome, @data, @servico, @horario, @telefone, @obs, @cpf)";
+
+                cmd.Parameters.AddWithValue("@nome", u.T_NAME);
+                cmd.Parameters.AddWithValue("@data", u.N_DATA);
+                cmd.Parameters.AddWithValue("@servico", u.T_SERVICO);
+                cmd.Parameters.AddWithValue("@horario", u.T_HORARIO);
+                cmd.Parameters.AddWithValue("@telefone", u.N_TELEFONE);  // Remova o '@' antes de "telefone"
+                cmd.Parameters.AddWithValue("@obs", u.T_OBS);
+                cmd.Parameters.AddWithValue("@cpf", u.N_CPF);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Usuario Cadastrado");
+                OpenConnection().Close();
+
+            }       
+
+            catch
+            {
+                MessageBox.Show("Não Foi Possivel Adicionar O Usuario Tente Novamnte");
+                OpenConnection().Close();
+            }
+                
+        }
+
+            //Rotinas Gerais
+
+        public static bool VerificarNumber(Usuario u)
+        {
+           
+                bool resultado;
+            SQLiteDataAdapter adapter = null;
+            DataTable dataTable = new DataTable();
+
+                using (var cmd = OpenConnection().CreateCommand())
+                {
+                    cmd.CommandText = "SELECT N_TELEFONE FROM fit_info WHERE N_TELEFONE ='"+u.N_TELEFONE+"'";
+                adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
+                    adapter.Fill(dataTable);
+                if(dataTable.Rows.Count>0)
+                {
+                        resultado = true;
+                }else
+                {
+                        resultado=false;
+
+                }
+
+                    
+                }
+
+                return resultado;
+            }
+
+
+        
+
+
 
     }
 }

@@ -36,7 +36,7 @@
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_PESQUISAR = new System.Windows.Forms.Button();
-            this.LBL_iD = new System.Windows.Forms.Label();
+            this.LBL_Telefone = new System.Windows.Forms.Label();
             this.lbl_Obs = new System.Windows.Forms.Label();
             this.txt_Id = new System.Windows.Forms.TextBox();
             this.txt_Cpf = new System.Windows.Forms.TextBox();
@@ -138,18 +138,18 @@
             this.btn_PESQUISAR.TabIndex = 0;
             this.btn_PESQUISAR.UseVisualStyleBackColor = true;
             // 
-            // LBL_iD
+            // LBL_Telefone
             // 
-            this.LBL_iD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LBL_Telefone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LBL_iD.AutoSize = true;
-            this.LBL_iD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_iD.Location = new System.Drawing.Point(80, 34);
-            this.LBL_iD.Name = "LBL_iD";
-            this.LBL_iD.Size = new System.Drawing.Size(25, 17);
-            this.LBL_iD.TabIndex = 0;
-            this.LBL_iD.Text = "ID:";
+            this.LBL_Telefone.AutoSize = true;
+            this.LBL_Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_Telefone.Location = new System.Drawing.Point(32, 35);
+            this.LBL_Telefone.Name = "LBL_Telefone";
+            this.LBL_Telefone.Size = new System.Drawing.Size(85, 17);
+            this.LBL_Telefone.TabIndex = 0;
+            this.LBL_Telefone.Text = "TELEFONE:";
             // 
             // lbl_Obs
             // 
@@ -171,6 +171,7 @@
             this.txt_Id.Name = "txt_Id";
             this.txt_Id.Size = new System.Drawing.Size(100, 20);
             this.txt_Id.TabIndex = 1;
+            this.txt_Id.Text = "123124";
             // 
             // txt_Cpf
             // 
@@ -179,6 +180,7 @@
             this.txt_Cpf.Name = "txt_Cpf";
             this.txt_Cpf.Size = new System.Drawing.Size(124, 20);
             this.txt_Cpf.TabIndex = 1;
+            this.txt_Cpf.Text = "23123";
             // 
             // txt_Servico
             // 
@@ -187,6 +189,7 @@
             this.txt_Servico.Name = "txt_Servico";
             this.txt_Servico.Size = new System.Drawing.Size(124, 20);
             this.txt_Servico.TabIndex = 1;
+            this.txt_Servico.Text = "muscula";
             // 
             // txt_Obs
             // 
@@ -196,6 +199,7 @@
             this.txt_Obs.Name = "txt_Obs";
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
             this.txt_Obs.TabIndex = 1;
+            this.txt_Obs.Text = "sadasdsadsadsa";
             // 
             // panel3
             // 
@@ -215,7 +219,7 @@
             this.panel3.Controls.Add(this.lbl_Obs);
             this.panel3.Controls.Add(this.lbl_Cpf);
             this.panel3.Controls.Add(this.lbl_Nome);
-            this.panel3.Controls.Add(this.LBL_iD);
+            this.panel3.Controls.Add(this.LBL_Telefone);
             this.panel3.Location = new System.Drawing.Point(209, 164);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(817, 346);
@@ -228,6 +232,7 @@
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(666, 20);
             this.txt_Nome.TabIndex = 1;
+            this.txt_Nome.Text = "car";
             // 
             // txt_Horario
             // 
@@ -236,6 +241,7 @@
             this.txt_Horario.Name = "txt_Horario";
             this.txt_Horario.Size = new System.Drawing.Size(100, 20);
             this.txt_Horario.TabIndex = 1;
+            this.txt_Horario.Text = "12";
             // 
             // txt_Data
             // 
@@ -244,6 +250,7 @@
             this.txt_Data.Name = "txt_Data";
             this.txt_Data.Size = new System.Drawing.Size(100, 20);
             this.txt_Data.TabIndex = 1;
+            this.txt_Data.Text = "23";
             // 
             // LBL_HORARIO
             // 
@@ -315,12 +322,13 @@
             this.btn_Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Cadastrar.AutoSize = true;
             this.btn_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.Location = new System.Drawing.Point(436, 659);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(465, 569);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(380, 89);
             this.btn_Cadastrar.TabIndex = 1;
             this.btn_Cadastrar.Text = "CADASTRAR";
             this.btn_Cadastrar.UseVisualStyleBackColor = true;
+            this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
             // 
             // PB_Foto
             // 
@@ -367,7 +375,7 @@
         private System.Windows.Forms.Button btn_VerFoto;
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label LBL_iD;
+        private System.Windows.Forms.Label LBL_Telefone;
         private System.Windows.Forms.Label lbl_Obs;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbl_Servico;
