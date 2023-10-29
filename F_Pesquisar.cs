@@ -68,6 +68,24 @@ namespace Academia_AMS
             Banco.ZerarGlobais();
             Banco.OpenConnection().Close();
         }
+
+        private void btn_Cadastro_Click(object sender, EventArgs e)
+        {
+            F_Cadastro f_Cadastro = new F_Cadastro();
+            f_Cadastro.Show();
+            this.Close();
+        }
+
+        private void btn_Excluir_Click(object sender, EventArgs e)
+        {
+            F_Excluir f_Excluir = new F_Excluir();
+            f_Excluir.Show();
+        }
+
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }

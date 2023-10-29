@@ -30,8 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Pesquisar));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Atualizar = new System.Windows.Forms.Button();
+            this.btn_Cadastro = new System.Windows.Forms.Button();
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -64,8 +63,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btn_Atualizar);
+            this.panel2.Controls.Add(this.btn_Cadastro);
             this.panel2.Controls.Add(this.btn_Sair);
             this.panel2.Controls.Add(this.btn_Excluir);
             this.panel2.Location = new System.Drawing.Point(1175, 110);
@@ -73,49 +71,41 @@
             this.panel2.Size = new System.Drawing.Size(166, 603);
             this.panel2.TabIndex = 8;
             // 
-            // button1
+            // btn_Cadastro
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.AutoSize = true;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Location = new System.Drawing.Point(38, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 82);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btn_Atualizar
-            // 
-            this.btn_Atualizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Atualizar.AutoSize = true;
-            this.btn_Atualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Atualizar.BackgroundImage")));
-            this.btn_Atualizar.Location = new System.Drawing.Point(38, 154);
-            this.btn_Atualizar.Name = "btn_Atualizar";
-            this.btn_Atualizar.Size = new System.Drawing.Size(99, 82);
-            this.btn_Atualizar.TabIndex = 0;
-            this.btn_Atualizar.UseVisualStyleBackColor = true;
+            this.btn_Cadastro.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btn_Cadastro.AutoSize = true;
+            this.btn_Cadastro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Cadastro.BackgroundImage")));
+            this.btn_Cadastro.Location = new System.Drawing.Point(38, 17);
+            this.btn_Cadastro.Name = "btn_Cadastro";
+            this.btn_Cadastro.Size = new System.Drawing.Size(99, 82);
+            this.btn_Cadastro.TabIndex = 0;
+            this.btn_Cadastro.UseVisualStyleBackColor = true;
+            this.btn_Cadastro.Click += new System.EventHandler(this.btn_Cadastro_Click);
             // 
             // btn_Sair
             // 
             this.btn_Sair.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Sair.AutoSize = true;
             this.btn_Sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Sair.BackgroundImage")));
-            this.btn_Sair.Location = new System.Drawing.Point(38, 405);
+            this.btn_Sair.Location = new System.Drawing.Point(38, 388);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btn_Excluir
             // 
             this.btn_Excluir.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Excluir.AutoSize = true;
             this.btn_Excluir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Excluir.BackgroundImage")));
-            this.btn_Excluir.Location = new System.Drawing.Point(38, 280);
+            this.btn_Excluir.Location = new System.Drawing.Point(38, 222);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(99, 82);
             this.btn_Excluir.TabIndex = 0;
             this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // panel3
             // 
@@ -358,7 +348,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_Atualizar;
         private System.Windows.Forms.Button btn_Sair;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Panel panel3;
@@ -377,7 +366,7 @@
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.Button btn_VerFoto;
         private System.Windows.Forms.PictureBox PB_Foto;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Cadastro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Pesquisa;
         private System.Windows.Forms.Button btn_Pesquisar;

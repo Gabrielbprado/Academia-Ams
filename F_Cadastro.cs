@@ -24,7 +24,7 @@ namespace Academia_AMS
         {
             
             usuario.T_NAME = txt_Nome.Text;
-            usuario.T_SERVICO = txt_Servico.Text;
+            usuario.T_SERVICO = comboBox1.Text;
             usuario.T_HORARIO = txt_Horario.Text;
             usuario.N_DATA = int.Parse(txt_Data.Text);
             usuario.N_CPF = int.Parse(txt_Cpf.Text);
@@ -59,6 +59,11 @@ namespace Academia_AMS
                     MessageBox.Show("Por favor, insira um CPF válido.");
                 }
             }
+
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
+    }
     }
 
