@@ -44,7 +44,7 @@ namespace Academia_AMS
         {
             if (int.TryParse(txt_Cpf.Text, out int cpf))
             {
-                F_Excluir f_Excluir = new F_Excluir(cpf);
+                F_Excluir f_Excluir = new F_Excluir();
                 f_Excluir.ShowDialog();
             }
             else
@@ -55,8 +55,7 @@ namespace Academia_AMS
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
-            int cpf = int.Parse(txt_Cpf.Text);
-            F_Excluir f_Excluir = new F_Excluir(cpf);
+            F_Excluir f_Excluir = new F_Excluir();
             f_Excluir.ShowDialog();
         }
     }

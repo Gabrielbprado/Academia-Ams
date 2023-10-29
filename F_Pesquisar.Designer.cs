@@ -105,7 +105,7 @@
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
-            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
+            
             // 
             // btn_Excluir
             // 
@@ -137,13 +137,13 @@
             this.panel3.Controls.Add(this.LBL_iD);
             this.panel3.Location = new System.Drawing.Point(224, 266);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(817, 351);
+            this.panel3.Size = new System.Drawing.Size(817, 355);
             this.panel3.TabIndex = 9;
             // 
             // txt_Nome
             // 
             this.txt_Nome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Nome.Location = new System.Drawing.Point(114, 77);
+            this.txt_Nome.Location = new System.Drawing.Point(114, 79);
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(666, 20);
             this.txt_Nome.TabIndex = 1;
@@ -151,7 +151,7 @@
             // txt_Horario
             // 
             this.txt_Horario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Horario.Location = new System.Drawing.Point(565, 33);
+            this.txt_Horario.Location = new System.Drawing.Point(565, 35);
             this.txt_Horario.Name = "txt_Horario";
             this.txt_Horario.Size = new System.Drawing.Size(100, 20);
             this.txt_Horario.TabIndex = 1;
@@ -159,7 +159,7 @@
             // txt_Data
             // 
             this.txt_Data.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Data.Location = new System.Drawing.Point(335, 33);
+            this.txt_Data.Location = new System.Drawing.Point(335, 35);
             this.txt_Data.Name = "txt_Data";
             this.txt_Data.Size = new System.Drawing.Size(100, 20);
             this.txt_Data.TabIndex = 1;
@@ -167,7 +167,7 @@
             // txt_Obs
             // 
             this.txt_Obs.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Obs.Location = new System.Drawing.Point(114, 201);
+            this.txt_Obs.Location = new System.Drawing.Point(114, 203);
             this.txt_Obs.Multiline = true;
             this.txt_Obs.Name = "txt_Obs";
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
@@ -176,7 +176,7 @@
             // txt_Servico
             // 
             this.txt_Servico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Servico.Location = new System.Drawing.Point(351, 126);
+            this.txt_Servico.Location = new System.Drawing.Point(351, 128);
             this.txt_Servico.Name = "txt_Servico";
             this.txt_Servico.Size = new System.Drawing.Size(124, 20);
             this.txt_Servico.TabIndex = 1;
@@ -184,7 +184,7 @@
             // txt_Id
             // 
             this.txt_Id.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Id.Location = new System.Drawing.Point(123, 36);
+            this.txt_Id.Location = new System.Drawing.Point(123, 38);
             this.txt_Id.Name = "txt_Id";
             this.txt_Id.Size = new System.Drawing.Size(100, 20);
             this.txt_Id.TabIndex = 1;

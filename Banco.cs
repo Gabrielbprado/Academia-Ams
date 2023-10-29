@@ -135,24 +135,36 @@ namespace Academia_AMS
 
             using (var cmd = OpenConnection().CreateCommand())
             {
-                cmd.CommandText = "SELECT N_TELEFONE FROM fit_info WHERE N_TELEFONE ='" + u.N_TELEFONE + "'";
-                adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
-                adapter.Fill(dataTable);
-                if (dataTable.Rows.Count > 0)
+                try
                 {
-                    resultado = true;
 
-                }
-                else
+                    cmd.CommandText = "SELECT N_TELEFONE FROM fit_info WHERE N_TELEFONE ='" + u.N_TELEFONE + "'";
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
+                    adapter.Fill(dataTable);
+                    if (dataTable.Rows.Count > 0)
+                    {
+                        resultado = true;
+
+                    }
+                    else
+                    {
+                        resultado = false;
+
+                    }
+                    return resultado;
+                }catch (Exception ex)
                 {
-                    resultado = false;
-
+                    throw ex;
                 }
-                OpenConnection().Close();
+                finally
+                {
+                    OpenConnection().Close();
+                }
+                
 
             }
 
-            return resultado;
+            
 
         }
 
@@ -160,80 +172,85 @@ namespace Academia_AMS
         {
             using (var cmd = OpenConnection().CreateCommand())
             {
-                cmd.CommandText = "SELECT * FROM fit_info WHERE N_CPF = @cpf";
-                cmd.Parameters.AddWithValue("@cpf", cpf);
-
-                SQLiteDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read())
+                try
                 {
-                    // Cria um objeto Usuario e preenche com os dados do banco
-                    Usuario usuario = new Usuario
-                    {
-                        T_NAME = reader["T_NAME"].ToString(),
-                        N_DATA = int.Parse(reader["N_DATA"].ToString()),
-                        T_SERVICO = reader["T_SERVICO"].ToString(),
-                        T_HORARIO = reader["T_HORARIO"].ToString(),
-                        N_TELEFONE = int.Parse(reader["N_TELEFONE"].ToString()),
-                        T_OBS = reader["T_OBS"].ToString(),
-                        N_CPF = int.Parse(reader["N_CPF"].ToString())
-                    };
 
-                    return usuario;
+
+                    cmd.CommandText = "SELECT * FROM fit_info WHERE N_CPF = @cpf";
+                    cmd.Parameters.AddWithValue("@cpf", cpf);
+
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Cria um objeto Usuario e preenche com os dados do banco
+                        Usuario usuario = new Usuario
+                        {
+                            T_NAME = reader["T_NAME"].ToString(),
+                            N_DATA = int.Parse(reader["N_DATA"].ToString()),
+                            T_SERVICO = reader["T_SERVICO"].ToString(),
+                            T_HORARIO = reader["T_HORARIO"].ToString(),
+                            N_TELEFONE = int.Parse(reader["N_TELEFONE"].ToString()),
+                            T_OBS = reader["T_OBS"].ToString(),
+                            N_CPF = int.Parse(reader["N_CPF"].ToString())
+                        };
+
+                        return usuario;
+
+                    }
+                    return null; // Retorna null se o usuário não for encontrado
                 }
-                OpenConnection().Close();
-                return null; // Retorna null se o usuário não for encontrado
+                catch (Exception ex) {
+                    throw ex;
+                }
+                finally
+                {
+                    OpenConnection().Close();
+                }
+                
+                
             }
         }
 
-        public static void ExcluirUsuario(int cpf)
+
+        public static void DeletarUsuario(int cpf)
         {
 
+            bool resultado;
+            SQLiteDataAdapter adapter = null;
+            DataTable dataTable = new DataTable();
 
-          
+                    
                 try
                 {
-                    using (var connection = OpenConnection())
-                    {
-                        // Adiciona um pequeno atraso antes de abrir uma nova conexão
-                        System.Threading.Thread.Sleep(100);
-
-                        // Obtém o usuário antes de excluir para obter o nome
-                        Usuario usuario = ObterUsuarioPorCPF(cpf);
-
-                        DialogResult resultado = MessageBox.Show($"Deseja excluir o usuário: {usuario.T_NAME}?", "Confirmação", MessageBoxButtons.OKCancel);
-
-                        if (resultado == DialogResult.OK)
-                        {
-                            using (var cmd = connection.CreateCommand())
-                            {
-                                cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF = @cpf";
-                                cmd.Parameters.AddWithValue("@cpf", cpf);
-                                cmd.ExecuteNonQuery();
-                            }
-
-                            MessageBox.Show("Usuário excluído com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Operação Cancelada", "Cancelado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
+                    var vcon = OpenConnection();
+                    var cmd = vcon.CreateCommand();
+                cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF=" + cpf;
+                cmd.ExecuteNonQuery();
+                vcon.Close();
+                   
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Erro ao excluir usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw ex;
                 }
-          
-        
-        }
-                
-       }
+              
 
+
+            }
+
+
+
+        }
 
 
 
     }
+
+
+
+
+
 
 
 

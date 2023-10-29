@@ -12,22 +12,24 @@ namespace Academia_AMS
 {
     public partial class F_Excluir : Form
     {
-        private int cpf; // Armazenar o CPF do usuário a ser excluído
+
 
         // Construtor que aceita o CPF como argumento
-        public F_Excluir(int cpf)
+        public F_Excluir()
         {
             InitializeComponent();
-            this.cpf = cpf; // Configura o CPF ao criar o formulário
+
         }
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
-            Banco.ExcluirUsuario(cpf);
-            this.Close(); // Fechar o formulário após a exclusão (se necessário)
-        }
-
-        // Restante do código...
+            DialogResult res = MessageBox.Show("Confirma a Exclusão ", "Excluir",MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                int cpf = int.Parse(textBox1.Text);
+                Banco.DeletarUsuario(cpf);
+            }
+                }
     }
 
 
