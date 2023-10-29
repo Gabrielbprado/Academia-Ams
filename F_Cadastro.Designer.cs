@@ -172,7 +172,6 @@
             this.txt_Id.Name = "txt_Id";
             this.txt_Id.Size = new System.Drawing.Size(100, 20);
             this.txt_Id.TabIndex = 1;
-            this.txt_Id.Text = "123124";
             // 
             // txt_Cpf
             // 
@@ -181,7 +180,6 @@
             this.txt_Cpf.Name = "txt_Cpf";
             this.txt_Cpf.Size = new System.Drawing.Size(124, 20);
             this.txt_Cpf.TabIndex = 1;
-            this.txt_Cpf.Text = "23123";
             // 
             // txt_Servico
             // 
@@ -190,7 +188,6 @@
             this.txt_Servico.Name = "txt_Servico";
             this.txt_Servico.Size = new System.Drawing.Size(124, 20);
             this.txt_Servico.TabIndex = 1;
-            this.txt_Servico.Text = "muscula";
             // 
             // txt_Obs
             // 
@@ -200,7 +197,6 @@
             this.txt_Obs.Name = "txt_Obs";
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
             this.txt_Obs.TabIndex = 1;
-            this.txt_Obs.Text = "sadasdsadsadsa";
             // 
             // panel3
             // 
@@ -233,7 +229,6 @@
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(666, 20);
             this.txt_Nome.TabIndex = 1;
-            this.txt_Nome.Text = "car";
             // 
             // txt_Horario
             // 
@@ -242,7 +237,6 @@
             this.txt_Horario.Name = "txt_Horario";
             this.txt_Horario.Size = new System.Drawing.Size(100, 20);
             this.txt_Horario.TabIndex = 1;
-            this.txt_Horario.Text = "12";
             // 
             // txt_Data
             // 
@@ -251,7 +245,6 @@
             this.txt_Data.Name = "txt_Data";
             this.txt_Data.Size = new System.Drawing.Size(100, 20);
             this.txt_Data.TabIndex = 1;
-            this.txt_Data.Text = "23";
             // 
             // LBL_HORARIO
             // 

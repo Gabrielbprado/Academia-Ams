@@ -72,6 +72,12 @@
     <Compile Include="F_Cadastro.Designer.cs">
       <DependentUpon>F_Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Excluir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Excluir.Designer.cs">
+      <DependentUpon>F_Excluir.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Pesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="F_Cadastro.resx">
       <DependentUpon>F_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Excluir.resx">
+      <DependentUpon>F_Excluir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Pesquisar.resx">
       <DependentUpon>F_Pesquisar.cs</DependentUpon>
