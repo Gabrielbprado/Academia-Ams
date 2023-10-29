@@ -53,7 +53,6 @@
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
-            this.btn_Cadastro = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Foto)).BeginInit();
@@ -316,7 +315,7 @@
             this.btn_Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Cadastrar.AutoSize = true;
             this.btn_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.Location = new System.Drawing.Point(422, 660);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(436, 659);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(380, 89);
             this.btn_Cadastrar.TabIndex = 1;
@@ -335,23 +334,12 @@
             this.PB_Foto.TabIndex = 0;
             this.PB_Foto.TabStop = false;
             // 
-            // btn_Cadastro
-            // 
-            this.btn_Cadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastro.Location = new System.Drawing.Point(462, 530);
-            this.btn_Cadastro.Name = "btn_Cadastro";
-            this.btn_Cadastro.Size = new System.Drawing.Size(330, 76);
-            this.btn_Cadastro.TabIndex = 4;
-            this.btn_Cadastro.Text = "CADASTRAR";
-            this.btn_Cadastro.UseVisualStyleBackColor = true;
-            // 
             // F_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1322, 771);
-            this.Controls.Add(this.btn_Cadastro);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Lbl_Titulo);
@@ -392,7 +380,6 @@
         private System.Windows.Forms.Label LBL_HORARIO;
         private System.Windows.Forms.Label LBL_DATA;
         private System.Windows.Forms.Label lbl_Nome;
-        private System.Windows.Forms.Button btn_Cadastro;
         public System.Windows.Forms.TextBox txt_Id;
         public System.Windows.Forms.TextBox txt_Cpf;
         public System.Windows.Forms.TextBox txt_Servico;

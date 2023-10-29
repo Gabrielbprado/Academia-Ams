@@ -50,7 +50,6 @@
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.LBL_iD = new System.Windows.Forms.Label();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
-            this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.btn_VerFoto = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -303,18 +302,6 @@
             this.Lbl_Titulo.TabIndex = 7;
             this.Lbl_Titulo.Text = "PESQUISA DE USUÁRIOS";
             // 
-            // btn_Cadastrar
-            // 
-            this.btn_Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Cadastrar.AutoSize = true;
-            this.btn_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.Location = new System.Drawing.Point(459, 613);
-            this.btn_Cadastrar.Name = "btn_Cadastrar";
-            this.btn_Cadastrar.Size = new System.Drawing.Size(380, 89);
-            this.btn_Cadastrar.TabIndex = 5;
-            this.btn_Cadastrar.Text = "CADASTRAR";
-            this.btn_Cadastrar.UseVisualStyleBackColor = true;
-            // 
             // btn_VerFoto
             // 
             this.btn_VerFoto.AutoSize = true;
@@ -377,7 +364,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Lbl_Titulo);
-            this.Controls.Add(this.btn_Cadastrar);
             this.Controls.Add(this.btn_VerFoto);
             this.Controls.Add(this.PB_Foto);
             this.Name = "F_Pesquisar";
@@ -414,7 +400,6 @@
         private System.Windows.Forms.Label lbl_Nome;
         private System.Windows.Forms.Label LBL_iD;
         private System.Windows.Forms.Label Lbl_Titulo;
-        private System.Windows.Forms.Button btn_Cadastrar;
         private System.Windows.Forms.Button btn_VerFoto;
         private System.Windows.Forms.PictureBox PB_Foto;
         private System.Windows.Forms.Button button1;
