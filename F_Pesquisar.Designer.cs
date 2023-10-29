@@ -105,7 +105,6 @@
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
-            
             // 
             // btn_Excluir
             // 
@@ -345,6 +344,7 @@
             this.Controls.Add(this.PB_Foto);
             this.Name = "F_Pesquisar";
             this.Text = "F_Pesquisar";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.F_Pesquisar_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);

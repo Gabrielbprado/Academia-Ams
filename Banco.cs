@@ -7,6 +7,8 @@ using System.Data.SQLite;
 using System.Data.Entity;
 using System.Data;
 using System.Windows.Forms;
+using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Academia_AMS
 {
@@ -35,8 +37,10 @@ namespace Academia_AMS
                     cmd.CommandText = "SELECT * FROM fit_info";
                     adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
                     adapter.Fill(dataTable);
-                    
+
+                    OpenConnection().Close();
                     return dataTable;
+
                 }
 
             }
@@ -44,11 +48,8 @@ namespace Academia_AMS
             {
                 throw ex;
                 
-            }finally
-            {
-
-                OpenConnection().Close();
             }
+           
 
         }
 
@@ -65,7 +66,8 @@ namespace Academia_AMS
                     cmd.CommandText = sql;
                     adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
                     adapter.Fill(dataTable);
-                   
+
+                    OpenConnection().Close();
                     return dataTable;
                 }
 
@@ -74,10 +76,6 @@ namespace Academia_AMS
             {
                 throw ex;
                 
-            }finally
-            {
-
-                OpenConnection().Close();
             }
 
 
@@ -102,13 +100,15 @@ namespace Academia_AMS
                 cmd.Parameters.AddWithValue("@data", u.N_DATA);
                 cmd.Parameters.AddWithValue("@servico", u.T_SERVICO);
                 cmd.Parameters.AddWithValue("@horario", u.T_HORARIO);
-                cmd.Parameters.AddWithValue("@telefone", u.N_TELEFONE);  // Remova o '@' antes de "telefone"
+                cmd.Parameters.AddWithValue("@telefone", u.N_TELEFONE);  
                 cmd.Parameters.AddWithValue("@obs", u.T_OBS);
                 cmd.Parameters.AddWithValue("@cpf", u.N_CPF);
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Usuario Cadastrado");
-                
+
+                OpenConnection().Close();
+
 
             }
 
@@ -116,11 +116,8 @@ namespace Academia_AMS
             {
                 MessageBox.Show("Não Foi Possivel Adicionar O Usuario Tente Novamnte");
                
-            }finally
-            {
-                OpenConnection().Close();
-
             }
+            
 
         }
 
@@ -151,15 +148,14 @@ namespace Academia_AMS
                         resultado = false;
 
                     }
+
+                    OpenConnection().Close();
                     return resultado;
                 }catch (Exception ex)
                 {
                     throw ex;
                 }
-                finally
-                {
-                    OpenConnection().Close();
-                }
+                
                 
 
             }
@@ -170,82 +166,91 @@ namespace Academia_AMS
 
         public static Usuario ObterUsuarioPorCPF(int cpf)
         {
-            using (var cmd = OpenConnection().CreateCommand())
+            using (var connection = OpenConnection())
+            using (var cmd = connection.CreateCommand())
             {
                 try
                 {
-
-
                     cmd.CommandText = "SELECT * FROM fit_info WHERE N_CPF = @cpf";
                     cmd.Parameters.AddWithValue("@cpf", cpf);
 
-                    SQLiteDataReader reader = cmd.ExecuteReader();
-
-                    if (reader.Read())
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
-                        // Cria um objeto Usuario e preenche com os dados do banco
-                        Usuario usuario = new Usuario
+                        if (reader.Read())
                         {
-                            T_NAME = reader["T_NAME"].ToString(),
-                            N_DATA = int.Parse(reader["N_DATA"].ToString()),
-                            T_SERVICO = reader["T_SERVICO"].ToString(),
-                            T_HORARIO = reader["T_HORARIO"].ToString(),
-                            N_TELEFONE = int.Parse(reader["N_TELEFONE"].ToString()),
-                            T_OBS = reader["T_OBS"].ToString(),
-                            N_CPF = int.Parse(reader["N_CPF"].ToString())
-                        };
+                            // Cria um objeto Usuario e preenche com os dados do banco
+                            Usuario usuario = new Usuario
+                            {
+                                T_NAME = reader["T_NAME"].ToString(),
+                                N_DATA = int.Parse(reader["N_DATA"].ToString()),
+                                T_SERVICO = reader["T_SERVICO"].ToString(),
+                                T_HORARIO = reader["T_HORARIO"].ToString(),
+                                N_TELEFONE = int.Parse(reader["N_TELEFONE"].ToString()),
+                                T_OBS = reader["T_OBS"].ToString(),
+                                N_CPF = int.Parse(reader["N_CPF"].ToString())
+                            };
 
-                        return usuario;
-
+                            return usuario;
+                        }
                     }
+
                     return null; // Retorna null se o usuário não for encontrado
-                }
-                catch (Exception ex) {
-                    throw ex;
-                }
-                finally
-                {
-                    OpenConnection().Close();
-                }
-                
-                
-            }
-        }
-
-
-        public static void DeletarUsuario(int cpf)
-        {
-
-            bool resultado;
-            SQLiteDataAdapter adapter = null;
-            DataTable dataTable = new DataTable();
-
-                    
-                try
-                {
-                    var vcon = OpenConnection();
-                    var cmd = vcon.CreateCommand();
-                cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF=" + cpf;
-                cmd.ExecuteNonQuery();
-                vcon.Close();
-                   
                 }
                 catch (Exception ex)
                 {
                     throw ex;
                 }
-              
-
-
             }
+        }
 
+        public static void ZerarGlobais()
+        {
 
+            Usuario usuario = new Usuario
+            {
+                T_NAME = "",
+                N_DATA = 0,
+                T_SERVICO = "",
+                T_HORARIO = "",
+                N_TELEFONE = 0,
+                T_OBS = "",
+                N_CPF = 0
+            };
 
         }
+
+        public static void DeletarUsuario(int cpf)
+        {
+                
+            try
+            {   
+                   
+                using (var vcon = OpenConnection())
+                {
+                    var cmd = vcon.CreateCommand();
+                    cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF = @cpf";
+                    cmd.Parameters.AddWithValue("@cpf", cpf);
+                    cmd.ExecuteNonQuery();
+                    return;
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+        }
+    }
+
 
 
 
     }
+
+
+
+
 
 
 

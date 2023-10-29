@@ -30,7 +30,11 @@ namespace Academia_AMS
             usuario.N_CPF = int.Parse(txt_Cpf.Text);
             usuario.T_OBS = txt_Obs.Text;
             usuario.N_TELEFONE = int.Parse(txt_Id.Text);
+
             Banco.NovoUsuario(usuario);
+            Banco.OpenConnection().Close();
+
+
         }
 
         private void btn_PESQUISAR_Click(object sender, EventArgs e)
@@ -40,23 +44,21 @@ namespace Academia_AMS
 
         }
 
-        private void btn_Sair_Click(object sender, EventArgs e)
-        {
-            if (int.TryParse(txt_Cpf.Text, out int cpf))
-            {
-                F_Excluir f_Excluir = new F_Excluir();
-                f_Excluir.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Por favor, insira um CPF válido.");
-            }
-        }
+    
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
-            F_Excluir f_Excluir = new F_Excluir();
-            f_Excluir.ShowDialog();
+           
+                if (int.TryParse(txt_Cpf.Text, out int cpf))
+                {
+                    F_Excluir f_Excluir = new F_Excluir();
+                    f_Excluir.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, insira um CPF válido.");
+                }
+            }
         }
     }
-}
+

@@ -10,27 +10,37 @@ using System.Windows.Forms;
 
 namespace Academia_AMS
 {
+
     public partial class F_Excluir : Form
     {
 
-
-        // Construtor que aceita o CPF como argumento
+        // Modifique o construtor para receber um objeto Usuario
         public F_Excluir()
         {
             InitializeComponent();
-
+            
         }
 
         private void btn_Excluir_Click(object sender, EventArgs e)
         {
-            DialogResult res = MessageBox.Show("Confirma a Exclusão ", "Excluir",MessageBoxButtons.YesNo);
-            if(res == DialogResult.Yes)
+            if (int.TryParse(textBox1.Text, out int cpf))
             {
-                int cpf = int.Parse(textBox1.Text);
-                Banco.DeletarUsuario(cpf);
-            }
+                DialogResult res = MessageBox.Show("Confirma a Exclusão ", "Excluir", MessageBoxButtons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    Banco.DeletarUsuario(cpf);
+                    MessageBox.Show("Usuário excluído com sucesso.");
                 }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, insira um CPF válido.");
+            }
+        }
+
     }
-
-
 }
+
+
+
+
