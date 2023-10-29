@@ -137,6 +137,7 @@
             this.btn_PESQUISAR.Size = new System.Drawing.Size(99, 82);
             this.btn_PESQUISAR.TabIndex = 0;
             this.btn_PESQUISAR.UseVisualStyleBackColor = true;
+            this.btn_PESQUISAR.Click += new System.EventHandler(this.btn_PESQUISAR_Click);
             // 
             // LBL_Telefone
             // 

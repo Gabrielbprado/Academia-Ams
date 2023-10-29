@@ -53,7 +53,7 @@
             this.btn_VerFoto = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Pesquisa = new System.Windows.Forms.TextBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -335,13 +335,13 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "DIGITE O NOME OU CPF:";
             // 
-            // textBox1
+            // txt_Pesquisa
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(587, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_Pesquisa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Pesquisa.Location = new System.Drawing.Point(587, 131);
+            this.txt_Pesquisa.Name = "txt_Pesquisa";
+            this.txt_Pesquisa.Size = new System.Drawing.Size(262, 20);
+            this.txt_Pesquisa.TabIndex = 1;
             // 
             // btn_Pesquisar
             // 
@@ -360,7 +360,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1338, 710);
             this.Controls.Add(this.btn_Pesquisar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_Pesquisa);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
@@ -405,7 +405,7 @@
         private System.Windows.Forms.PictureBox PB_Foto;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Pesquisa;
         private System.Windows.Forms.Button btn_Pesquisar;
     }
 }

@@ -141,8 +141,39 @@ namespace Academia_AMS
                 return resultado;
             }
 
+        public static Usuario ObterUsuarioPorCPF(int cpf)
+        {
+            using (var cmd = OpenConnection().CreateCommand())
+            {
+                cmd.CommandText = "SELECT * FROM fit_info WHERE N_CPF = @cpf";
+                cmd.Parameters.AddWithValue("@cpf", cpf);
 
-        
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // Cria um objeto Usuario e preenche com os dados do banco
+                    Usuario usuario = new Usuario
+                    {
+                        T_NAME = reader["T_NAME"].ToString(),
+                        N_DATA = int.Parse(reader["N_DATA"].ToString()),
+                        T_SERVICO = reader["T_SERVICO"].ToString(),
+                        T_HORARIO = reader["T_HORARIO"].ToString(),
+                        N_TELEFONE = int.Parse(reader["N_TELEFONE"].ToString()),
+                        T_OBS = reader["T_OBS"].ToString(),
+                        N_CPF = int.Parse(reader["N_CPF"].ToString())
+                    };
+
+                    return usuario;
+                }
+
+                return null; // Retorna null se o usuário não for encontrado
+            }
+        }
+
+
+
+
 
 
 

@@ -30,5 +30,12 @@ namespace Academia_AMS
             usuario.N_TELEFONE = int.Parse(txt_Id.Text);
             Banco.NovoUsuario(usuario);
         }
+
+        private void btn_PESQUISAR_Click(object sender, EventArgs e)
+        {
+            F_Pesquisar f_Pesquisar = new F_Pesquisar();
+            f_Pesquisar.ShowDialog();
+
+        }
     }
 }
