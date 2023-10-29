@@ -1,0 +1,26 @@
+D:\Projeto_QuaseAcabadoAcademiaJeff\Academia AMS\obj\Debug\Academia AMS.csproj.AssemblyReference.cache
+D:\Projeto_QuaseAcabadoAcademiaJeff\Academia AMS\obj\Debug\Academia_AMS.F_Cadastro.resources
+D:\Projeto_QuaseAcabadoAcademiaJeff\Academia AMS\obj\Debug\Academia_AMS.F_Pesquisar.resources
+D:\Projeto_QuaseAcabadoAcademiaJeff\Academia AMS\obj\Debug\Academia_AMS.Properties.Resources.resources
+D:\Projeto_QuaseAcabadoAcademiaJeff\Academia AMS\obj\Debug\Academia AMS.csproj.GenerateResource.cache
+D:\Projeto_QuaseAcabadoAcademiaJeff\Academia AMS\obj\Debug\Academia AMS.csproj.CoreCompileInputs.cache
+D:\Academia_AMS\Academia AMS\bin\Debug\Academia AMS.exe.config
+D:\Academia_AMS\Academia AMS\bin\Debug\Academia AMS.exe
+D:\Academia_AMS\Academia AMS\bin\Debug\Academia AMS.pdb
+D:\Academia_AMS\Academia AMS\bin\Debug\EntityFramework.dll
+D:\Academia_AMS\Academia AMS\bin\Debug\EntityFramework.SqlServer.dll
+D:\Academia_AMS\Academia AMS\bin\Debug\System.Data.SQLite.dll
+D:\Academia_AMS\Academia AMS\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Academia_AMS\Academia AMS\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Academia_AMS\Academia AMS\bin\Debug\EntityFramework.xml
+D:\Academia_AMS\Academia AMS\bin\Debug\EntityFramework.SqlServer.xml
+D:\Academia_AMS\Academia AMS\bin\Debug\System.Data.SQLite.xml
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.AssemblyReference.cache
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Cadastro.resources
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Pesquisar.resources
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.Properties.Resources.resources
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.GenerateResource.cache
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.CoreCompileInputs.cache
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.CopyComplete
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.exe
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.pdb
