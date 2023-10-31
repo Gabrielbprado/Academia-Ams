@@ -16,7 +16,7 @@ namespace Academia_AMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new F_Cadastro());
+            Application.Run(new F_Login());
         }
     }
 }

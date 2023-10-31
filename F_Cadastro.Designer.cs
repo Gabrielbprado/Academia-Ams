@@ -297,7 +297,7 @@
             this.btn_Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Cadastrar.AutoSize = true;
             this.btn_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.Location = new System.Drawing.Point(451, 558);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(448, 586);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(380, 89);
             this.btn_Cadastrar.TabIndex = 1;
