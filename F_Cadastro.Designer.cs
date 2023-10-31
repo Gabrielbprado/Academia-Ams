@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Cadastro));
-            this.btn_VerFoto = new System.Windows.Forms.Button();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Sair = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.txt_Horario = new System.Windows.Forms.TextBox();
             this.txt_Data = new System.Windows.Forms.TextBox();
@@ -51,21 +51,10 @@
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Foto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_VerFoto
-            // 
-            this.btn_VerFoto.AutoSize = true;
-            this.btn_VerFoto.Location = new System.Drawing.Point(188, 37);
-            this.btn_VerFoto.Name = "btn_VerFoto";
-            this.btn_VerFoto.Size = new System.Drawing.Size(108, 31);
-            this.btn_VerFoto.TabIndex = 1;
-            this.btn_VerFoto.Text = "FOTO";
-            this.btn_VerFoto.UseVisualStyleBackColor = true;
             // 
             // Lbl_Titulo
             // 
@@ -203,6 +192,17 @@
             this.panel3.Size = new System.Drawing.Size(817, 346);
             this.panel3.TabIndex = 3;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cliente",
+            "Personal"});
+            this.comboBox1.Location = new System.Drawing.Point(419, 124);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(140, 21);
+            this.comboBox1.TabIndex = 2;
+            // 
             // txt_Nome
             // 
             this.txt_Nome.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -317,17 +317,6 @@
             this.PB_Foto.TabIndex = 0;
             this.PB_Foto.TabStop = false;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cliente",
-            "Personal"});
-            this.comboBox1.Location = new System.Drawing.Point(419, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 2;
-            // 
             // F_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,7 +327,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.btn_Cadastrar);
-            this.Controls.Add(this.btn_VerFoto);
             this.Controls.Add(this.PB_Foto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "F_Cadastro";
@@ -358,7 +346,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox PB_Foto;
-        private System.Windows.Forms.Button btn_VerFoto;
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LBL_Telefone;
