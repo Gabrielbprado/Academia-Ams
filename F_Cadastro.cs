@@ -12,10 +12,12 @@ namespace Academia_AMS
 {
     public partial class F_Cadastro : Form
     {
-        Usuario usuario = new Usuario();
+       Banco banco = new Banco();
+        Pessoa usuario = new Pessoa();
         public F_Cadastro()
         {
             InitializeComponent();
+            Pessoa.bancoUsuario = "Data Source = D:\\Academia_AMS\\Academia AMS\\Banco_Fitness\\Bd_Fit.db";
 
 
         }
@@ -24,15 +26,15 @@ namespace Academia_AMS
         {
             
             usuario.T_NAME = txt_Nome.Text;
-            usuario.T_SERVICO = comboBox1.Text;
+            
             usuario.T_HORARIO = txt_Horario.Text;
             usuario.N_DATA = int.Parse(txt_Data.Text);
             usuario.N_CPF = int.Parse(txt_Cpf.Text);
             usuario.T_OBS = txt_Obs.Text;
             usuario.N_TELEFONE = int.Parse(txt_Id.Text);
 
-            Banco.NovoUsuario(usuario);
-            Banco.OpenConnection().Close();
+            banco.NovoUsuario(usuario);
+            Banco.OpenConnection(Pessoa.bancoUsuario).Close();
 
 
         }

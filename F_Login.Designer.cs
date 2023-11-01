@@ -92,6 +92,7 @@
             this.btn_Login.TabIndex = 4;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // lbl_CadastrarPersonal
             // 
@@ -103,6 +104,7 @@
             this.lbl_CadastrarPersonal.TabIndex = 5;
             this.lbl_CadastrarPersonal.TabStop = true;
             this.lbl_CadastrarPersonal.Text = "Cadastrar Personal";
+            this.lbl_CadastrarPersonal.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_CadastrarPersonal_LinkClicked);
             // 
             // panel1
             // 

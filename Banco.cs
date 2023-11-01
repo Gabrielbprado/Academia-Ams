@@ -15,10 +15,12 @@ namespace Academia_AMS
     internal class Banco
     {
         private static SQLiteConnection connection;
+        private  static string bancos = Pessoa.bancoUsuario;
 
-        public static SQLiteConnection OpenConnection()
-        {
-            connection = new SQLiteConnection("Data Source = D:\\Academia_AMS\\Academia AMS\\Banco_Fitness\\Bd_Fit.db");
+        public static SQLiteConnection OpenConnection(string banco)
+        {   
+            
+            connection = new SQLiteConnection(banco);
             connection.Open();
             return connection;
 
@@ -32,13 +34,13 @@ namespace Academia_AMS
             try
             {
 
-                using (var cmd = OpenConnection().CreateCommand())
+                using (var cmd = OpenConnection(bancos).CreateCommand())
                 {
                     cmd.CommandText = "SELECT * FROM fit_info";
-                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection(bancos));
                     adapter.Fill(dataTable);
 
-                    OpenConnection().Close();
+                    OpenConnection(bancos).Close();
                     return dataTable;
 
                 }
@@ -61,13 +63,13 @@ namespace Academia_AMS
             try
             {
 
-                using (var cmd = OpenConnection().CreateCommand())
+                using (var cmd = OpenConnection(bancos).CreateCommand())
                 {
                     cmd.CommandText = sql;
-                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection(bancos));
                     adapter.Fill(dataTable);
 
-                    OpenConnection().Close();
+                    OpenConnection(bancos).Close();
                     return dataTable;
                 }
 
@@ -83,7 +85,7 @@ namespace Academia_AMS
 
         ///informaçoes do usuario (Cadastro)
 
-        public static void NovoUsuario(Usuario u)
+        public virtual void NovoUsuario(Pessoa u)
         {
             if (VerificarNumber(u))
             {
@@ -93,7 +95,7 @@ namespace Academia_AMS
             }
             try
             {
-                var cmd = OpenConnection().CreateCommand();
+                var cmd = OpenConnection(bancos).CreateCommand();
                 cmd.CommandText = "INSERT INTO fit_info (T_NAME, N_DATA, T_SERVICO, T_HORARIO, N_TELEFONE, T_OBS, N_CPF) VALUES (@nome, @data, @servico, @horario, @telefone, @obs, @cpf)";
 
                 cmd.Parameters.AddWithValue("@nome", u.T_NAME);
@@ -107,7 +109,7 @@ namespace Academia_AMS
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Usuario Cadastrado");
 
-                OpenConnection().Close();
+                OpenConnection(bancos).Close();
 
 
             }
@@ -123,20 +125,20 @@ namespace Academia_AMS
 
         //Rotinas Gerais
 
-        public static bool VerificarNumber(Usuario u)
+        public static bool VerificarNumber(Pessoa u)
         {
 
             bool resultado;
             SQLiteDataAdapter adapter = null;
             DataTable dataTable = new DataTable();
 
-            using (var cmd = OpenConnection().CreateCommand())
+            using (var cmd = OpenConnection(bancos).CreateCommand())
             {
                 try
                 {
 
                     cmd.CommandText = "SELECT N_TELEFONE FROM fit_info WHERE N_TELEFONE ='" + u.N_TELEFONE + "'";
-                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection());
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection(bancos));
                     adapter.Fill(dataTable);
                     if (dataTable.Rows.Count > 0)
                     {
@@ -149,7 +151,7 @@ namespace Academia_AMS
 
                     }
 
-                    OpenConnection().Close();
+                    OpenConnection(bancos).Close();
                     return resultado;
                 }catch (Exception ex)
                 {
@@ -164,9 +166,9 @@ namespace Academia_AMS
 
         }
 
-        public static Usuario ObterUsuarioPorCPF(int cpf)
+        public static Pessoa ObterUsuarioPorCPF(int cpf)
         {
-            using (var connection = OpenConnection())
+            using (var connection = OpenConnection(bancos))
             using (var cmd = connection.CreateCommand())
             {
                 try
@@ -179,7 +181,7 @@ namespace Academia_AMS
                         if (reader.Read())
                         {
                             // Cria um objeto Usuario e preenche com os dados do banco
-                            Usuario usuario = new Usuario
+                            Pessoa usuario = new Pessoa
                             {
                                 T_NAME = reader["T_NAME"].ToString(),
                                 N_DATA = int.Parse(reader["N_DATA"].ToString()),
@@ -206,7 +208,7 @@ namespace Academia_AMS
         public static void ZerarGlobais()
         {
 
-            Usuario usuario = new Usuario
+            Pessoa usuario = new Pessoa
             {
                 T_NAME = "",
                 N_DATA = 0,
@@ -225,7 +227,7 @@ namespace Academia_AMS
             try
             {   
                    
-                using (var vcon = OpenConnection())
+                using (var vcon = OpenConnection(bancos))
                 {
                     var cmd = vcon.CreateCommand();
                     cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF = @cpf";

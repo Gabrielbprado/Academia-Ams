@@ -40,13 +40,11 @@
             this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.txt_Horario = new System.Windows.Forms.TextBox();
             this.txt_Data = new System.Windows.Forms.TextBox();
             this.LBL_HORARIO = new System.Windows.Forms.Label();
             this.LBL_DATA = new System.Windows.Forms.Label();
-            this.lbl_Servico = new System.Windows.Forms.Label();
             this.lbl_Cpf = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
@@ -173,7 +171,6 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.AutoSize = true;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.comboBox1);
             this.panel3.Controls.Add(this.txt_Nome);
             this.panel3.Controls.Add(this.txt_Horario);
             this.panel3.Controls.Add(this.txt_Data);
@@ -182,7 +179,6 @@
             this.panel3.Controls.Add(this.txt_Id);
             this.panel3.Controls.Add(this.LBL_HORARIO);
             this.panel3.Controls.Add(this.LBL_DATA);
-            this.panel3.Controls.Add(this.lbl_Servico);
             this.panel3.Controls.Add(this.lbl_Obs);
             this.panel3.Controls.Add(this.lbl_Cpf);
             this.panel3.Controls.Add(this.lbl_Nome);
@@ -191,17 +187,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(817, 346);
             this.panel3.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cliente",
-            "Personal"});
-            this.comboBox1.Location = new System.Drawing.Point(419, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 2;
             // 
             // txt_Nome
             // 
@@ -252,19 +237,6 @@
             this.LBL_DATA.Size = new System.Drawing.Size(49, 17);
             this.LBL_DATA.TabIndex = 0;
             this.LBL_DATA.Text = "DATA:";
-            // 
-            // lbl_Servico
-            // 
-            this.lbl_Servico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Servico.AutoSize = true;
-            this.lbl_Servico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Servico.Location = new System.Drawing.Point(332, 122);
-            this.lbl_Servico.Name = "lbl_Servico";
-            this.lbl_Servico.Size = new System.Drawing.Size(72, 17);
-            this.lbl_Servico.TabIndex = 0;
-            this.lbl_Servico.Text = "SERVIÇO:";
             // 
             // lbl_Cpf
             // 
@@ -351,7 +323,6 @@
         private System.Windows.Forms.Label LBL_Telefone;
         private System.Windows.Forms.Label lbl_Obs;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbl_Servico;
         private System.Windows.Forms.Label lbl_Cpf;
         private System.Windows.Forms.Button btn_PESQUISAR;
         private System.Windows.Forms.Button btn_Cadastrar;
@@ -366,7 +337,6 @@
         public System.Windows.Forms.TextBox txt_Nome;
         public System.Windows.Forms.TextBox txt_Horario;
         public System.Windows.Forms.TextBox txt_Data;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

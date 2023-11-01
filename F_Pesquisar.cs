@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Academia_AMS
 {
     public partial class F_Pesquisar : Form
-    {
+    {   F_Cadastro f_Cadastro = new F_Cadastro();
         public F_Pesquisar()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Academia_AMS
                 if (int.TryParse(txt_Pesquisa.Text, out int cpf))
                 {
                     // Chama o método para obter os dados do usuário pelo CPF
-                    Usuario usuario = Banco.ObterUsuarioPorCPF(cpf);
+                    Pessoa usuario = Banco.ObterUsuarioPorCPF(cpf);
 
                     // Verifica se o usuário foi encontrado
                     if (usuario != null)
@@ -48,11 +48,11 @@ namespace Academia_AMS
             }
             finally
             {
-                Banco.OpenConnection().Close();
+                Banco.OpenConnection(Pessoa.bancoUsuario).Close();
             }
         }
 
-        private void PreencherCampos(Usuario usuario)
+        private void PreencherCampos(Pessoa usuario)
         {
             txt_Nome.Text = usuario.T_NAME;
             txt_Data.Text = usuario.N_DATA.ToString();
@@ -66,7 +66,7 @@ namespace Academia_AMS
         private void F_Pesquisar_FormClosed(object sender, FormClosedEventArgs e)
         {
             Banco.ZerarGlobais();
-            Banco.OpenConnection().Close();
+            Banco.OpenConnection(Pessoa.bancoUsuario).Close();
         }
 
         private void btn_Cadastro_Click(object sender, EventArgs e)
