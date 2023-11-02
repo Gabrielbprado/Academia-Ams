@@ -37,9 +37,15 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
+            this.txt_Contrato = new System.Windows.Forms.TextBox();
+            this.txt_Senha = new System.Windows.Forms.TextBox();
+            this.txt_Salario = new System.Windows.Forms.TextBox();
             this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.txt_Id = new System.Windows.Forms.TextBox();
+            this.lbl_Contrato = new System.Windows.Forms.Label();
+            this.lbl_Senha = new System.Windows.Forms.Label();
             this.lbl_Servico = new System.Windows.Forms.Label();
+            this.lbl_Salario = new System.Windows.Forms.Label();
             this.lbl_Obs = new System.Windows.Forms.Label();
             this.lbl_Cpf = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
-            this.lbl_Salario = new System.Windows.Forms.Label();
-            this.txt_Salario = new System.Windows.Forms.TextBox();
-            this.lbl_Contrato = new System.Windows.Forms.Label();
-            this.txt_Contrato = new System.Windows.Forms.TextBox();
-            this.lbl_Senha = new System.Windows.Forms.Label();
-            this.txt_Senha = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Foto)).BeginInit();
@@ -82,6 +82,7 @@
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btn_Excluir
             // 
@@ -160,6 +161,30 @@
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
             this.txt_Obs.TabIndex = 1;
             // 
+            // txt_Contrato
+            // 
+            this.txt_Contrato.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Contrato.Location = new System.Drawing.Point(609, 123);
+            this.txt_Contrato.Name = "txt_Contrato";
+            this.txt_Contrato.Size = new System.Drawing.Size(124, 20);
+            this.txt_Contrato.TabIndex = 1;
+            // 
+            // txt_Senha
+            // 
+            this.txt_Senha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Senha.Location = new System.Drawing.Point(580, 32);
+            this.txt_Senha.Name = "txt_Senha";
+            this.txt_Senha.Size = new System.Drawing.Size(124, 20);
+            this.txt_Senha.TabIndex = 1;
+            // 
+            // txt_Salario
+            // 
+            this.txt_Salario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Salario.Location = new System.Drawing.Point(358, 123);
+            this.txt_Salario.Name = "txt_Salario";
+            this.txt_Salario.Size = new System.Drawing.Size(124, 20);
+            this.txt_Salario.TabIndex = 1;
+            // 
             // txt_Cpf
             // 
             this.txt_Cpf.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -176,6 +201,32 @@
             this.txt_Id.Size = new System.Drawing.Size(100, 20);
             this.txt_Id.TabIndex = 1;
             // 
+            // lbl_Contrato
+            // 
+            this.lbl_Contrato.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Contrato.AutoSize = true;
+            this.lbl_Contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Contrato.Location = new System.Drawing.Point(504, 123);
+            this.lbl_Contrato.Name = "lbl_Contrato";
+            this.lbl_Contrato.Size = new System.Drawing.Size(90, 17);
+            this.lbl_Contrato.TabIndex = 0;
+            this.lbl_Contrato.Text = "CONTRATO:";
+            // 
+            // lbl_Senha
+            // 
+            this.lbl_Senha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Senha.AutoSize = true;
+            this.lbl_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Senha.Location = new System.Drawing.Point(503, 32);
+            this.lbl_Senha.Name = "lbl_Senha";
+            this.lbl_Senha.Size = new System.Drawing.Size(59, 17);
+            this.lbl_Senha.TabIndex = 0;
+            this.lbl_Senha.Text = "SENHA:";
+            // 
             // lbl_Servico
             // 
             this.lbl_Servico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -188,6 +239,19 @@
             this.lbl_Servico.Size = new System.Drawing.Size(72, 17);
             this.lbl_Servico.TabIndex = 0;
             this.lbl_Servico.Text = "SERVIÇO:";
+            // 
+            // lbl_Salario
+            // 
+            this.lbl_Salario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Salario.AutoSize = true;
+            this.lbl_Salario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Salario.Location = new System.Drawing.Point(281, 123);
+            this.lbl_Salario.Name = "lbl_Salario";
+            this.lbl_Salario.Size = new System.Drawing.Size(71, 17);
+            this.lbl_Salario.TabIndex = 0;
+            this.lbl_Salario.Text = "SALÁRIO:";
             // 
             // lbl_Obs
             // 
@@ -276,69 +340,6 @@
             this.PB_Foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PB_Foto.TabIndex = 4;
             this.PB_Foto.TabStop = false;
-            // 
-            // lbl_Salario
-            // 
-            this.lbl_Salario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Salario.AutoSize = true;
-            this.lbl_Salario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Salario.Location = new System.Drawing.Point(281, 123);
-            this.lbl_Salario.Name = "lbl_Salario";
-            this.lbl_Salario.Size = new System.Drawing.Size(71, 17);
-            this.lbl_Salario.TabIndex = 0;
-            this.lbl_Salario.Text = "SALÁRIO:";
-            // 
-            // txt_Salario
-            // 
-            this.txt_Salario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Salario.Location = new System.Drawing.Point(358, 123);
-            this.txt_Salario.Name = "txt_Salario";
-            this.txt_Salario.Size = new System.Drawing.Size(124, 20);
-            this.txt_Salario.TabIndex = 1;
-            // 
-            // lbl_Contrato
-            // 
-            this.lbl_Contrato.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Contrato.AutoSize = true;
-            this.lbl_Contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Contrato.Location = new System.Drawing.Point(504, 123);
-            this.lbl_Contrato.Name = "lbl_Contrato";
-            this.lbl_Contrato.Size = new System.Drawing.Size(90, 17);
-            this.lbl_Contrato.TabIndex = 0;
-            this.lbl_Contrato.Text = "CONTRATO:";
-            // 
-            // txt_Contrato
-            // 
-            this.txt_Contrato.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Contrato.Location = new System.Drawing.Point(609, 123);
-            this.txt_Contrato.Name = "txt_Contrato";
-            this.txt_Contrato.Size = new System.Drawing.Size(124, 20);
-            this.txt_Contrato.TabIndex = 1;
-            // 
-            // lbl_Senha
-            // 
-            this.lbl_Senha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Senha.AutoSize = true;
-            this.lbl_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Senha.Location = new System.Drawing.Point(503, 32);
-            this.lbl_Senha.Name = "lbl_Senha";
-            this.lbl_Senha.Size = new System.Drawing.Size(59, 17);
-            this.lbl_Senha.TabIndex = 0;
-            this.lbl_Senha.Text = "SENHA:";
-            // 
-            // txt_Senha
-            // 
-            this.txt_Senha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Senha.Location = new System.Drawing.Point(580, 32);
-            this.txt_Senha.Name = "txt_Senha";
-            this.txt_Senha.Size = new System.Drawing.Size(124, 20);
-            this.txt_Senha.TabIndex = 1;
             // 
             // F_Instrutor
             // 

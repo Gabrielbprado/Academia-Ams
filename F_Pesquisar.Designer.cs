@@ -38,16 +38,13 @@
             this.txt_Horario = new System.Windows.Forms.TextBox();
             this.txt_Data = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
-            this.txt_Servico = new System.Windows.Forms.TextBox();
             this.txt_Id = new System.Windows.Forms.TextBox();
             this.LBL_HORARIO = new System.Windows.Forms.Label();
             this.LBL_DATA = new System.Windows.Forms.Label();
-            this.lbl_Servico = new System.Windows.Forms.Label();
             this.lbl_Obs = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.LBL_iD = new System.Windows.Forms.Label();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
-            this.btn_VerFoto = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Pesquisa = new System.Windows.Forms.TextBox();
@@ -116,11 +113,9 @@
             this.panel3.Controls.Add(this.txt_Horario);
             this.panel3.Controls.Add(this.txt_Data);
             this.panel3.Controls.Add(this.txt_Obs);
-            this.panel3.Controls.Add(this.txt_Servico);
             this.panel3.Controls.Add(this.txt_Id);
             this.panel3.Controls.Add(this.LBL_HORARIO);
             this.panel3.Controls.Add(this.LBL_DATA);
-            this.panel3.Controls.Add(this.lbl_Servico);
             this.panel3.Controls.Add(this.lbl_Obs);
             this.panel3.Controls.Add(this.lbl_Nome);
             this.panel3.Controls.Add(this.LBL_iD);
@@ -162,14 +157,6 @@
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
             this.txt_Obs.TabIndex = 1;
             // 
-            // txt_Servico
-            // 
-            this.txt_Servico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Servico.Location = new System.Drawing.Point(351, 128);
-            this.txt_Servico.Name = "txt_Servico";
-            this.txt_Servico.Size = new System.Drawing.Size(124, 20);
-            this.txt_Servico.TabIndex = 1;
-            // 
             // txt_Id
             // 
             this.txt_Id.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -204,19 +191,6 @@
             this.LBL_DATA.TabIndex = 0;
             this.LBL_DATA.Text = "DATA:";
             // 
-            // lbl_Servico
-            // 
-            this.lbl_Servico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Servico.AutoSize = true;
-            this.lbl_Servico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Servico.Location = new System.Drawing.Point(273, 124);
-            this.lbl_Servico.Name = "lbl_Servico";
-            this.lbl_Servico.Size = new System.Drawing.Size(72, 17);
-            this.lbl_Servico.TabIndex = 0;
-            this.lbl_Servico.Text = "SERVIÇO:";
-            // 
             // lbl_Obs
             // 
             this.lbl_Obs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -250,11 +224,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LBL_iD.AutoSize = true;
             this.LBL_iD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_iD.Location = new System.Drawing.Point(80, 34);
+            this.LBL_iD.Location = new System.Drawing.Point(79, 38);
             this.LBL_iD.Name = "LBL_iD";
-            this.LBL_iD.Size = new System.Drawing.Size(25, 17);
+            this.LBL_iD.Size = new System.Drawing.Size(38, 17);
             this.LBL_iD.TabIndex = 0;
-            this.LBL_iD.Text = "ID:";
+            this.LBL_iD.Text = "CPF:";
             // 
             // Lbl_Titulo
             // 
@@ -266,16 +240,6 @@
             this.Lbl_Titulo.Size = new System.Drawing.Size(459, 39);
             this.Lbl_Titulo.TabIndex = 7;
             this.Lbl_Titulo.Text = "PESQUISA DE USUÁRIOS";
-            // 
-            // btn_VerFoto
-            // 
-            this.btn_VerFoto.AutoSize = true;
-            this.btn_VerFoto.Location = new System.Drawing.Point(176, 39);
-            this.btn_VerFoto.Name = "btn_VerFoto";
-            this.btn_VerFoto.Size = new System.Drawing.Size(108, 31);
-            this.btn_VerFoto.TabIndex = 6;
-            this.btn_VerFoto.Text = "FOTO";
-            this.btn_VerFoto.UseVisualStyleBackColor = true;
             // 
             // PB_Foto
             // 
@@ -330,7 +294,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Lbl_Titulo);
-            this.Controls.Add(this.btn_VerFoto);
             this.Controls.Add(this.PB_Foto);
             this.Name = "F_Pesquisar";
             this.Text = "F_Pesquisar";
@@ -355,16 +318,13 @@
         private System.Windows.Forms.TextBox txt_Horario;
         private System.Windows.Forms.TextBox txt_Data;
         private System.Windows.Forms.TextBox txt_Obs;
-        private System.Windows.Forms.TextBox txt_Servico;
         private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.Label LBL_HORARIO;
         private System.Windows.Forms.Label LBL_DATA;
-        private System.Windows.Forms.Label lbl_Servico;
         private System.Windows.Forms.Label lbl_Obs;
         private System.Windows.Forms.Label lbl_Nome;
         private System.Windows.Forms.Label LBL_iD;
         private System.Windows.Forms.Label Lbl_Titulo;
-        private System.Windows.Forms.Button btn_VerFoto;
         private System.Windows.Forms.PictureBox PB_Foto;
         private System.Windows.Forms.Button btn_Cadastro;
         private System.Windows.Forms.Label label1;
