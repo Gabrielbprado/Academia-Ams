@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -59,6 +60,36 @@ namespace Academia_AMS
             {
                 MessageBox.Show("Não Foi Possível Adicionar O Usuário. Tente Novamente");
             }
+        }
+
+
+        public  DataTable Consulta(string sql)
+        {
+
+            SQLiteDataAdapter adapter = null;
+            DataTable dataTable = new DataTable();
+            try
+            {
+
+                using (var cmd = OpenConnection(Pessoa.bancoUsuario).CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection(Pessoa.bancoUsuario));
+                    adapter.Fill(dataTable);
+
+                    OpenConnection(Pessoa.bancoUsuario).Close();
+                    return dataTable;
+                }
+
+            }
+            catch 
+            {
+                MessageBox.Show("Usuario Não Encontrado");
+                throw;
+
+            }
+
+
         }
 
     }

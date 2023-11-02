@@ -55,33 +55,7 @@ namespace Academia_AMS
 
         }
 
-        public static DataTable Consulta(string sql)
-        {
-
-            SQLiteDataAdapter adapter = null;
-            DataTable dataTable = new DataTable();
-            try
-            {
-
-                using (var cmd = OpenConnection(bancos).CreateCommand())
-                {
-                    cmd.CommandText = sql;
-                    adapter = new SQLiteDataAdapter(cmd.CommandText, OpenConnection(bancos));
-                    adapter.Fill(dataTable);
-
-                    OpenConnection(bancos).Close();
-                    return dataTable;
-                }
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-                
-            }
-
-
-        }
+       
 
         ///informaçoes do usuario (Cadastro)
 
