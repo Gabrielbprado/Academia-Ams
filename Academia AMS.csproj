@@ -78,6 +78,12 @@
     <Compile Include="F_Excluir.Designer.cs">
       <DependentUpon>F_Excluir.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Login.Designer.cs">
+      <DependentUpon>F_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_Pesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Excluir.resx">
       <DependentUpon>F_Excluir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Login.resx">
+      <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Pesquisar.resx">
       <DependentUpon>F_Pesquisar.cs</DependentUpon>
