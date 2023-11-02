@@ -82,10 +82,10 @@ namespace Academia_AMS
                 }
 
             }
-            catch 
+            catch (Exception ex)
             {
-                MessageBox.Show("Usuario Não Encontrado");
-                throw;
+               
+                throw ex;
 
             }
 
