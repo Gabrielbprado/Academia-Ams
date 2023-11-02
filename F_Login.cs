@@ -19,7 +19,7 @@ namespace Academia_AMS
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-
+                
         }
 
         private void lbl_CadastrarPersonal_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
