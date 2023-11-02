@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Cadastro));
-            this.btn_VerFoto = new System.Windows.Forms.Button();
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Atualizar = new System.Windows.Forms.Button();
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_PESQUISAR = new System.Windows.Forms.Button();
@@ -40,7 +38,6 @@
             this.lbl_Obs = new System.Windows.Forms.Label();
             this.txt_Id = new System.Windows.Forms.TextBox();
             this.txt_Cpf = new System.Windows.Forms.TextBox();
-            this.txt_Servico = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_Nome = new System.Windows.Forms.TextBox();
@@ -48,7 +45,6 @@
             this.txt_Data = new System.Windows.Forms.TextBox();
             this.LBL_HORARIO = new System.Windows.Forms.Label();
             this.LBL_DATA = new System.Windows.Forms.Label();
-            this.lbl_Servico = new System.Windows.Forms.Label();
             this.lbl_Cpf = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
@@ -57,16 +53,6 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Foto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_VerFoto
-            // 
-            this.btn_VerFoto.AutoSize = true;
-            this.btn_VerFoto.Location = new System.Drawing.Point(188, 37);
-            this.btn_VerFoto.Name = "btn_VerFoto";
-            this.btn_VerFoto.Size = new System.Drawing.Size(108, 31);
-            this.btn_VerFoto.TabIndex = 1;
-            this.btn_VerFoto.Text = "FOTO";
-            this.btn_VerFoto.UseVisualStyleBackColor = true;
             // 
             // Lbl_Titulo
             // 
@@ -85,7 +71,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.btn_Atualizar);
             this.panel2.Controls.Add(this.btn_Sair);
             this.panel2.Controls.Add(this.btn_Excluir);
             this.panel2.Controls.Add(this.btn_PESQUISAR);
@@ -94,38 +79,29 @@
             this.panel2.Size = new System.Drawing.Size(166, 651);
             this.panel2.TabIndex = 3;
             // 
-            // btn_Atualizar
-            // 
-            this.btn_Atualizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Atualizar.AutoSize = true;
-            this.btn_Atualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Atualizar.BackgroundImage")));
-            this.btn_Atualizar.Location = new System.Drawing.Point(38, 157);
-            this.btn_Atualizar.Name = "btn_Atualizar";
-            this.btn_Atualizar.Size = new System.Drawing.Size(99, 82);
-            this.btn_Atualizar.TabIndex = 0;
-            this.btn_Atualizar.UseVisualStyleBackColor = true;
-            // 
             // btn_Sair
             // 
             this.btn_Sair.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Sair.AutoSize = true;
             this.btn_Sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Sair.BackgroundImage")));
-            this.btn_Sair.Location = new System.Drawing.Point(38, 414);
+            this.btn_Sair.Location = new System.Drawing.Point(38, 397);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // btn_Excluir
             // 
             this.btn_Excluir.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Excluir.AutoSize = true;
             this.btn_Excluir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Excluir.BackgroundImage")));
-            this.btn_Excluir.Location = new System.Drawing.Point(38, 281);
+            this.btn_Excluir.Location = new System.Drawing.Point(38, 218);
             this.btn_Excluir.Name = "btn_Excluir";
             this.btn_Excluir.Size = new System.Drawing.Size(99, 82);
             this.btn_Excluir.TabIndex = 0;
             this.btn_Excluir.UseVisualStyleBackColor = true;
+            this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // btn_PESQUISAR
             // 
@@ -181,14 +157,6 @@
             this.txt_Cpf.Size = new System.Drawing.Size(124, 20);
             this.txt_Cpf.TabIndex = 1;
             // 
-            // txt_Servico
-            // 
-            this.txt_Servico.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Servico.Location = new System.Drawing.Point(415, 125);
-            this.txt_Servico.Name = "txt_Servico";
-            this.txt_Servico.Size = new System.Drawing.Size(124, 20);
-            this.txt_Servico.TabIndex = 1;
-            // 
             // txt_Obs
             // 
             this.txt_Obs.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -207,12 +175,10 @@
             this.panel3.Controls.Add(this.txt_Horario);
             this.panel3.Controls.Add(this.txt_Data);
             this.panel3.Controls.Add(this.txt_Obs);
-            this.panel3.Controls.Add(this.txt_Servico);
             this.panel3.Controls.Add(this.txt_Cpf);
             this.panel3.Controls.Add(this.txt_Id);
             this.panel3.Controls.Add(this.LBL_HORARIO);
             this.panel3.Controls.Add(this.LBL_DATA);
-            this.panel3.Controls.Add(this.lbl_Servico);
             this.panel3.Controls.Add(this.lbl_Obs);
             this.panel3.Controls.Add(this.lbl_Cpf);
             this.panel3.Controls.Add(this.lbl_Nome);
@@ -272,19 +238,6 @@
             this.LBL_DATA.TabIndex = 0;
             this.LBL_DATA.Text = "DATA:";
             // 
-            // lbl_Servico
-            // 
-            this.lbl_Servico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_Servico.AutoSize = true;
-            this.lbl_Servico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Servico.Location = new System.Drawing.Point(332, 122);
-            this.lbl_Servico.Name = "lbl_Servico";
-            this.lbl_Servico.Size = new System.Drawing.Size(72, 17);
-            this.lbl_Servico.TabIndex = 0;
-            this.lbl_Servico.Text = "SERVIÇO:";
-            // 
             // lbl_Cpf
             // 
             this.lbl_Cpf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -316,7 +269,7 @@
             this.btn_Cadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Cadastrar.AutoSize = true;
             this.btn_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cadastrar.Location = new System.Drawing.Point(465, 569);
+            this.btn_Cadastrar.Location = new System.Drawing.Point(448, 586);
             this.btn_Cadastrar.Name = "btn_Cadastrar";
             this.btn_Cadastrar.Size = new System.Drawing.Size(380, 89);
             this.btn_Cadastrar.TabIndex = 1;
@@ -346,7 +299,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.Lbl_Titulo);
             this.Controls.Add(this.btn_Cadastrar);
-            this.Controls.Add(this.btn_VerFoto);
             this.Controls.Add(this.PB_Foto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "F_Cadastro";
@@ -366,17 +318,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox PB_Foto;
-        private System.Windows.Forms.Button btn_VerFoto;
         private System.Windows.Forms.Label Lbl_Titulo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LBL_Telefone;
         private System.Windows.Forms.Label lbl_Obs;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lbl_Servico;
         private System.Windows.Forms.Label lbl_Cpf;
         private System.Windows.Forms.Button btn_PESQUISAR;
         private System.Windows.Forms.Button btn_Cadastrar;
-        private System.Windows.Forms.Button btn_Atualizar;
         private System.Windows.Forms.Button btn_Sair;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Label LBL_HORARIO;
@@ -384,7 +333,6 @@
         private System.Windows.Forms.Label lbl_Nome;
         public System.Windows.Forms.TextBox txt_Id;
         public System.Windows.Forms.TextBox txt_Cpf;
-        public System.Windows.Forms.TextBox txt_Servico;
         public System.Windows.Forms.TextBox txt_Obs;
         public System.Windows.Forms.TextBox txt_Nome;
         public System.Windows.Forms.TextBox txt_Horario;

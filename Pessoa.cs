@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Academia_AMS
 {
-    internal class Usuario
+    internal class Pessoa
     {
         public int N_CPF;
         public string T_NAME;
@@ -15,6 +15,6 @@ namespace Academia_AMS
         public string T_HORARIO;
         public int N_TELEFONE;
         public string T_OBS;
-
+        public static string bancoUsuario = "Data Source = D:\\Academia_AMS\\Academia AMS\\Banco_Fitness\\Bd_Fit.db";
     }
 }

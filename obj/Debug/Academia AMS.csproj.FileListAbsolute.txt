@@ -24,3 +24,6 @@ D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.CoreCompileInputs.cac
 D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.CopyComplete
 D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.exe
 D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.pdb
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Excluir.resources
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Login.resources
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Instrutor.resources
