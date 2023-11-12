@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(F_Instrutor));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Sair = new System.Windows.Forms.Button();
-            this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_CadastrarUsuario = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -65,11 +64,10 @@
             this.panel2.AutoSize = true;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.btn_Sair);
-            this.panel2.Controls.Add(this.btn_Excluir);
             this.panel2.Controls.Add(this.btn_CadastrarUsuario);
-            this.panel2.Location = new System.Drawing.Point(1191, 112);
+            this.panel2.Location = new System.Drawing.Point(1257, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 651);
+            this.panel2.Size = new System.Drawing.Size(166, 245);
             this.panel2.TabIndex = 7;
             // 
             // btn_Sair
@@ -77,30 +75,19 @@
             this.btn_Sair.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_Sair.AutoSize = true;
             this.btn_Sair.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Sair.BackgroundImage")));
-            this.btn_Sair.Location = new System.Drawing.Point(38, 450);
+            this.btn_Sair.Location = new System.Drawing.Point(32, 128);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(99, 82);
             this.btn_Sair.TabIndex = 0;
             this.btn_Sair.UseVisualStyleBackColor = true;
             this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
-            // btn_Excluir
-            // 
-            this.btn_Excluir.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btn_Excluir.AutoSize = true;
-            this.btn_Excluir.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Excluir.BackgroundImage")));
-            this.btn_Excluir.Location = new System.Drawing.Point(38, 250);
-            this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(99, 82);
-            this.btn_Excluir.TabIndex = 0;
-            this.btn_Excluir.UseVisualStyleBackColor = true;
-            // 
             // btn_CadastrarUsuario
             // 
             this.btn_CadastrarUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btn_CadastrarUsuario.AutoSize = true;
             this.btn_CadastrarUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_CadastrarUsuario.BackgroundImage")));
-            this.btn_CadastrarUsuario.Location = new System.Drawing.Point(38, 30);
+            this.btn_CadastrarUsuario.Location = new System.Drawing.Point(32, 22);
             this.btn_CadastrarUsuario.Name = "btn_CadastrarUsuario";
             this.btn_CadastrarUsuario.Size = new System.Drawing.Size(99, 82);
             this.btn_CadastrarUsuario.TabIndex = 0;
@@ -367,7 +354,6 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_Sair;
-        private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Button btn_CadastrarUsuario;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox comboBox1;

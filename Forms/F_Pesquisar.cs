@@ -12,6 +12,7 @@ namespace Academia_AMS
 {
     public partial class F_Pesquisar : Form
     {   F_Cadastro f_Cadastro = new F_Cadastro();
+        Banco banco = new Banco();
         public F_Pesquisar()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Academia_AMS
                 if (int.TryParse(txt_Pesquisa.Text, out int cpf))
                 {
                     // Chama o método para obter os dados do usuário pelo CPF
-                    Pessoa usuario = Banco.ObterUsuarioPorCPF(cpf);
+                    Pessoa usuario = banco.ObterUsuarioPorCPF(cpf);
 
                     // Verifica se o usuário foi encontrado
                     if (usuario != null)

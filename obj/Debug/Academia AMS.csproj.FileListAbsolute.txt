@@ -27,3 +27,4 @@ D:\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.pdb
 D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Excluir.resources
 D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Login.resources
 D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.F_Instrutor.resources
+D:\Academia_AMS\Academia AMS\obj\Debug\Academia_AMS.Forms.F_ExcluirInstrutor.resources

@@ -42,6 +42,7 @@
             this.label1.Size = new System.Drawing.Size(163, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Digite o CPF do Usuario:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_Excluir
             // 
@@ -61,6 +62,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // F_Excluir
             // 

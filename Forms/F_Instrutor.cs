@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Academia_AMS.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,9 +34,9 @@ namespace Academia_AMS
             persona.T_SERVICO = comboBox1.Text;
             persona.salario = long.Parse(txt_Salario.Text); // Alterando para double, pois parece ser um valor decimal
             persona.contrato = txt_Contrato.Text;
-            persona.N_CPF = int.Parse(txt_Cpf.Text);
+            persona.N_CPF = long.Parse(txt_Cpf.Text);
             persona.T_OBS = txt_Obs.Text;
-            persona.N_TELEFONE = int.Parse(txt_Id.Text);
+            persona.N_TELEFONE = long.Parse(txt_Id.Text);
             persona.senha = txt_Senha.Text;
 
             BancoADM.NovoUsuario(persona); // Enviando a instância de Personal para o método NovoUsuario
@@ -46,6 +47,12 @@ namespace Academia_AMS
         private void btn_Sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_Excluir_Click(object sender, EventArgs e)
+        {
+            F_ExcluirInstrutor f_Excluir = new F_ExcluirInstrutor();
+            f_Excluir.Show();
         }
     }
 }

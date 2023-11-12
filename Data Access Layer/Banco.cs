@@ -15,7 +15,7 @@ namespace Academia_AMS
     internal class Banco
     {
         private static SQLiteConnection connection;
-        private  static string bancos = Pessoa.bancoUsuario;
+        public static string bancos { get; private set; } = Pessoa.bancoUsuario;
 
         public static SQLiteConnection OpenConnection(string banco)
         {   
@@ -139,7 +139,7 @@ namespace Academia_AMS
 
         }
 
-        public static Pessoa ObterUsuarioPorCPF(int cpf)
+        public virtual Pessoa ObterUsuarioPorCPF(int cpf)
         {
             using (var connection = OpenConnection(bancos))
             using (var cmd = connection.CreateCommand())
@@ -179,7 +179,7 @@ namespace Academia_AMS
 
     
 
-        public static void DeletarUsuario(int cpf)
+        public virtual void DeletarUsuario(int cpf)
         {
                 
             try

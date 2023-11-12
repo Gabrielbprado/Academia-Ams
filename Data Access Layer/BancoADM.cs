@@ -11,7 +11,7 @@ namespace Academia_AMS
 {
     internal class BancoADM : Banco
     {
-        
+
 
         public BancoADM()
         {
@@ -63,7 +63,7 @@ namespace Academia_AMS
         }
 
 
-        public  DataTable Consulta(string sql)
+        public DataTable Consulta(string sql)
         {
 
             SQLiteDataAdapter adapter = null;
@@ -84,7 +84,7 @@ namespace Academia_AMS
             }
             catch (Exception ex)
             {
-               
+
                 throw ex;
 
             }
@@ -92,5 +92,10 @@ namespace Academia_AMS
 
         }
 
-    }
-}
+        
+        }
+
+     
+            }
+
+        

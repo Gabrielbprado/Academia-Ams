@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,7 @@ namespace Academia_AMS
             {
                 MessageBox.Show("Usuário ou Senha Inválidos");
                 txt_cpf.Focus();
+               
             }
 
 
