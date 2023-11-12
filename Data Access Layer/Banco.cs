@@ -139,7 +139,7 @@ namespace Academia_AMS
 
         }
 
-        public virtual Pessoa ObterUsuarioPorCPF(int cpf)
+        public  Pessoa ObterUsuarioPorCPF(int cpf)
         {
             using (var connection = OpenConnection(bancos))
             using (var cmd = connection.CreateCommand())
