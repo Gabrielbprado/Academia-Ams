@@ -29,7 +29,7 @@ namespace Academia_AMS
                 if (res == DialogResult.Yes)
                 {
                     Banco.DeletarUsuario(cpf);
-                    MessageBox.Show("Usuário excluído com sucesso.");
+                    
                 }
             }
             else

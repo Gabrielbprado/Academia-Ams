@@ -38,7 +38,7 @@
             this.txt_Horario = new System.Windows.Forms.TextBox();
             this.txt_Data = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
-            this.txt_Id = new System.Windows.Forms.TextBox();
+            this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.LBL_HORARIO = new System.Windows.Forms.Label();
             this.LBL_DATA = new System.Windows.Forms.Label();
             this.lbl_Obs = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_Pesquisa = new System.Windows.Forms.TextBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
+            this.lbl_Telefone = new System.Windows.Forms.Label();
+            this.txt_Telefone = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Foto)).BeginInit();
@@ -113,10 +115,12 @@
             this.panel3.Controls.Add(this.txt_Horario);
             this.panel3.Controls.Add(this.txt_Data);
             this.panel3.Controls.Add(this.txt_Obs);
-            this.panel3.Controls.Add(this.txt_Id);
+            this.panel3.Controls.Add(this.txt_Telefone);
+            this.panel3.Controls.Add(this.txt_Cpf);
             this.panel3.Controls.Add(this.LBL_HORARIO);
             this.panel3.Controls.Add(this.LBL_DATA);
             this.panel3.Controls.Add(this.lbl_Obs);
+            this.panel3.Controls.Add(this.lbl_Telefone);
             this.panel3.Controls.Add(this.lbl_Nome);
             this.panel3.Controls.Add(this.LBL_iD);
             this.panel3.Location = new System.Drawing.Point(224, 266);
@@ -157,13 +161,13 @@
             this.txt_Obs.Size = new System.Drawing.Size(675, 145);
             this.txt_Obs.TabIndex = 1;
             // 
-            // txt_Id
+            // txt_Cpf
             // 
-            this.txt_Id.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Id.Location = new System.Drawing.Point(123, 38);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(100, 20);
-            this.txt_Id.TabIndex = 1;
+            this.txt_Cpf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Cpf.Location = new System.Drawing.Point(123, 38);
+            this.txt_Cpf.Name = "txt_Cpf";
+            this.txt_Cpf.Size = new System.Drawing.Size(100, 20);
+            this.txt_Cpf.TabIndex = 1;
             // 
             // LBL_HORARIO
             // 
@@ -283,6 +287,27 @@
             this.btn_Pesquisar.UseVisualStyleBackColor = true;
             this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
             // 
+            // lbl_Telefone
+            // 
+            this.lbl_Telefone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Telefone.AutoSize = true;
+            this.lbl_Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Telefone.Location = new System.Drawing.Point(279, 142);
+            this.lbl_Telefone.Name = "lbl_Telefone";
+            this.lbl_Telefone.Size = new System.Drawing.Size(85, 17);
+            this.lbl_Telefone.TabIndex = 0;
+            this.lbl_Telefone.Text = "TELEFONE:";
+            // 
+            // txt_Telefone
+            // 
+            this.txt_Telefone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Telefone.Location = new System.Drawing.Point(370, 142);
+            this.txt_Telefone.Name = "txt_Telefone";
+            this.txt_Telefone.Size = new System.Drawing.Size(100, 20);
+            this.txt_Telefone.TabIndex = 1;
+            // 
             // F_Pesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,7 +343,7 @@
         private System.Windows.Forms.TextBox txt_Horario;
         private System.Windows.Forms.TextBox txt_Data;
         private System.Windows.Forms.TextBox txt_Obs;
-        private System.Windows.Forms.TextBox txt_Id;
+        private System.Windows.Forms.TextBox txt_Cpf;
         private System.Windows.Forms.Label LBL_HORARIO;
         private System.Windows.Forms.Label LBL_DATA;
         private System.Windows.Forms.Label lbl_Obs;
@@ -330,5 +355,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_Pesquisa;
         private System.Windows.Forms.Button btn_Pesquisar;
+        private System.Windows.Forms.TextBox txt_Telefone;
+        private System.Windows.Forms.Label lbl_Telefone;
     }
 }

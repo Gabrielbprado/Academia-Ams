@@ -70,11 +70,10 @@ namespace Academia_AMS
             try
             {
                 var cmd = OpenConnection(bancos).CreateCommand();
-                cmd.CommandText = "INSERT INTO fit_info (T_NAME, N_DATA, T_SERVICO, T_HORARIO, N_TELEFONE, T_OBS, N_CPF) VALUES (@nome, @data, @servico, @horario, @telefone, @obs, @cpf)";
+                cmd.CommandText = "INSERT INTO fit_info (T_NAME, N_DATA, T_HORARIO, N_TELEFONE, T_OBS, N_CPF) VALUES (@nome, @data, @horario, @telefone, @obs, @cpf)";
 
                 cmd.Parameters.AddWithValue("@nome", u.T_NAME);
-                cmd.Parameters.AddWithValue("@data", u.N_DATA);
-                cmd.Parameters.AddWithValue("@servico", u.T_SERVICO);
+                cmd.Parameters.AddWithValue("@data", u.N_DATA);     
                 cmd.Parameters.AddWithValue("@horario", u.T_HORARIO);
                 cmd.Parameters.AddWithValue("@telefone", u.N_TELEFONE);  
                 cmd.Parameters.AddWithValue("@obs", u.T_OBS);
@@ -99,7 +98,7 @@ namespace Academia_AMS
 
         //Rotinas Gerais
 
-        public static bool VerificarNumber(Pessoa u)
+        protected static bool VerificarNumber(Pessoa u)
         {
 
             bool resultado;
@@ -158,12 +157,11 @@ namespace Academia_AMS
                             Pessoa usuario = new Pessoa
                             {
                                 T_NAME = reader["T_NAME"].ToString(),
-                                N_DATA = int.Parse(reader["N_DATA"].ToString()),
-                                T_SERVICO = reader["T_SERVICO"].ToString(),
+                                N_DATA = (reader["N_DATA"].ToString()),
                                 T_HORARIO = reader["T_HORARIO"].ToString(),
-                                N_TELEFONE = int.Parse(reader["N_TELEFONE"].ToString()),
+                                N_TELEFONE = long.Parse(reader["N_TELEFONE"].ToString()),
                                 T_OBS = reader["T_OBS"].ToString(),
-                                N_CPF = int.Parse(reader["N_CPF"].ToString())
+                                N_CPF = long.Parse(reader["N_CPF"].ToString())
                             };
 
                             return usuario;
@@ -179,21 +177,7 @@ namespace Academia_AMS
             }
         }
 
-        public static void ZerarGlobais()
-        {
-
-            Pessoa usuario = new Pessoa
-            {
-                T_NAME = "",
-                N_DATA = 0,
-                T_SERVICO = "",
-                T_HORARIO = "",
-                N_TELEFONE = 0,
-                T_OBS = "",
-                N_CPF = 0
-            };
-
-        }
+    
 
         public static void DeletarUsuario(int cpf)
         {
@@ -203,41 +187,27 @@ namespace Academia_AMS
                    
                 using (var vcon = OpenConnection(bancos))
                 {
-                    var cmd = vcon.CreateCommand();
-                    cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF = @cpf";
-                    cmd.Parameters.AddWithValue("@cpf", cpf);
-                    cmd.ExecuteNonQuery();
-                    return;
+                    if (ObterUsuarioPorCPF(cpf) != null)
+                    {
+                        var cmd = vcon.CreateCommand();
+                        cmd.CommandText = "DELETE FROM fit_info WHERE N_CPF = @cpf";
+                        cmd.Parameters.AddWithValue("@cpf", cpf);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Usuario Excluido Com Sucesso");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario Não Encontrado");
+                    }
                    
                 }
             }
-            catch (Exception ex)
+            catch 
             {
-                
-                throw ex;
+
+                MessageBox.Show("Usuario Não Encontrado");
             }
         }
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    

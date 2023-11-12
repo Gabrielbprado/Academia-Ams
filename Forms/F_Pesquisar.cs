@@ -56,16 +56,18 @@ namespace Academia_AMS
         {
             txt_Nome.Text = usuario.T_NAME;
             txt_Data.Text = usuario.N_DATA.ToString();
-            txt_Servico.Text = usuario.T_SERVICO;
+            
             txt_Horario.Text = usuario.T_HORARIO;
-            txt_Id.Text = usuario.N_TELEFONE.ToString();
+            txt_Cpf.Text = usuario.N_CPF.ToString();
             txt_Obs.Text = usuario.T_OBS;
+            txt_Telefone.Text = usuario.N_TELEFONE.ToString();
+            
         }
 
 
         private void F_Pesquisar_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Banco.ZerarGlobais();
+           
             Banco.OpenConnection(Pessoa.bancoUsuario).Close();
         }
 

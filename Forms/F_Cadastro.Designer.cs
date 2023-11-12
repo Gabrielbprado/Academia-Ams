@@ -36,19 +36,19 @@
             this.btn_PESQUISAR = new System.Windows.Forms.Button();
             this.LBL_Telefone = new System.Windows.Forms.Label();
             this.lbl_Obs = new System.Windows.Forms.Label();
-            this.txt_Id = new System.Windows.Forms.TextBox();
+            this.txt_Telefone = new System.Windows.Forms.TextBox();
             this.txt_Cpf = new System.Windows.Forms.TextBox();
             this.txt_Obs = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.txt_Horario = new System.Windows.Forms.TextBox();
-            this.txt_Data = new System.Windows.Forms.TextBox();
             this.LBL_HORARIO = new System.Windows.Forms.Label();
-            this.LBL_DATA = new System.Windows.Forms.Label();
             this.lbl_Cpf = new System.Windows.Forms.Label();
             this.lbl_Nome = new System.Windows.Forms.Label();
             this.btn_Cadastrar = new System.Windows.Forms.Button();
             this.PB_Foto = new System.Windows.Forms.PictureBox();
+            this.txt_Data = new System.Windows.Forms.TextBox();
+            this.LBL_DATA = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PB_Foto)).BeginInit();
@@ -141,13 +141,13 @@
             this.lbl_Obs.TabIndex = 0;
             this.lbl_Obs.Text = "OBS:";
             // 
-            // txt_Id
+            // txt_Telefone
             // 
-            this.txt_Id.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Id.Location = new System.Drawing.Point(123, 34);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(100, 20);
-            this.txt_Id.TabIndex = 1;
+            this.txt_Telefone.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Telefone.Location = new System.Drawing.Point(123, 34);
+            this.txt_Telefone.Name = "txt_Telefone";
+            this.txt_Telefone.Size = new System.Drawing.Size(100, 20);
+            this.txt_Telefone.TabIndex = 1;
             // 
             // txt_Cpf
             // 
@@ -176,7 +176,7 @@
             this.panel3.Controls.Add(this.txt_Data);
             this.panel3.Controls.Add(this.txt_Obs);
             this.panel3.Controls.Add(this.txt_Cpf);
-            this.panel3.Controls.Add(this.txt_Id);
+            this.panel3.Controls.Add(this.txt_Telefone);
             this.panel3.Controls.Add(this.LBL_HORARIO);
             this.panel3.Controls.Add(this.LBL_DATA);
             this.panel3.Controls.Add(this.lbl_Obs);
@@ -204,14 +204,6 @@
             this.txt_Horario.Size = new System.Drawing.Size(100, 20);
             this.txt_Horario.TabIndex = 1;
             // 
-            // txt_Data
-            // 
-            this.txt_Data.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Data.Location = new System.Drawing.Point(335, 31);
-            this.txt_Data.Name = "txt_Data";
-            this.txt_Data.Size = new System.Drawing.Size(100, 20);
-            this.txt_Data.TabIndex = 1;
-            // 
             // LBL_HORARIO
             // 
             this.LBL_HORARIO.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -224,19 +216,6 @@
             this.LBL_HORARIO.Size = new System.Drawing.Size(76, 17);
             this.LBL_HORARIO.TabIndex = 0;
             this.LBL_HORARIO.Text = "HORARIO:";
-            // 
-            // LBL_DATA
-            // 
-            this.LBL_DATA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LBL_DATA.AutoSize = true;
-            this.LBL_DATA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBL_DATA.Location = new System.Drawing.Point(261, 32);
-            this.LBL_DATA.Name = "LBL_DATA";
-            this.LBL_DATA.Size = new System.Drawing.Size(49, 17);
-            this.LBL_DATA.TabIndex = 0;
-            this.LBL_DATA.Text = "DATA:";
             // 
             // lbl_Cpf
             // 
@@ -289,6 +268,27 @@
             this.PB_Foto.TabIndex = 0;
             this.PB_Foto.TabStop = false;
             // 
+            // txt_Data
+            // 
+            this.txt_Data.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Data.Location = new System.Drawing.Point(335, 31);
+            this.txt_Data.Name = "txt_Data";
+            this.txt_Data.Size = new System.Drawing.Size(100, 20);
+            this.txt_Data.TabIndex = 1;
+            // 
+            // LBL_DATA
+            // 
+            this.LBL_DATA.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LBL_DATA.AutoSize = true;
+            this.LBL_DATA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBL_DATA.Location = new System.Drawing.Point(280, 32);
+            this.LBL_DATA.Name = "LBL_DATA";
+            this.LBL_DATA.Size = new System.Drawing.Size(49, 17);
+            this.LBL_DATA.TabIndex = 0;
+            this.LBL_DATA.Text = "DATA:";
+            // 
             // F_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,14 +329,14 @@
         private System.Windows.Forms.Button btn_Sair;
         private System.Windows.Forms.Button btn_Excluir;
         private System.Windows.Forms.Label LBL_HORARIO;
-        private System.Windows.Forms.Label LBL_DATA;
         private System.Windows.Forms.Label lbl_Nome;
-        public System.Windows.Forms.TextBox txt_Id;
+        public System.Windows.Forms.TextBox txt_Telefone;
         public System.Windows.Forms.TextBox txt_Cpf;
         public System.Windows.Forms.TextBox txt_Obs;
         public System.Windows.Forms.TextBox txt_Nome;
         public System.Windows.Forms.TextBox txt_Horario;
         public System.Windows.Forms.TextBox txt_Data;
+        private System.Windows.Forms.Label LBL_DATA;
     }
 }
 

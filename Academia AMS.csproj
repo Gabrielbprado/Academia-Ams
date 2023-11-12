@@ -65,24 +65,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.cs" />
-    <Compile Include="BancoADM.cs" />
-    <Compile Include="F_Cadastro.cs">
+    <Compile Include="Data Access Layer\Banco.cs" />
+    <Compile Include="Data Access Layer\BancoADM.cs" />
+    <Compile Include="Forms\F_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Cadastro.Designer.cs">
+    <Compile Include="Forms\F_Cadastro.Designer.cs">
       <DependentUpon>F_Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Excluir.cs">
+    <Compile Include="Forms\F_Excluir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Excluir.Designer.cs">
+    <Compile Include="Forms\F_Excluir.Designer.cs">
       <DependentUpon>F_Excluir.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Instrutor.cs">
+    <Compile Include="Forms\F_Instrutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Instrutor.Designer.cs">
+    <Compile Include="Forms\F_Instrutor.Designer.cs">
       <DependentUpon>F_Instrutor.cs</DependentUpon>
     </Compile>
     <Compile Include="F_Login.cs">
@@ -91,29 +91,29 @@
     <Compile Include="F_Login.Designer.cs">
       <DependentUpon>F_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_Pesquisar.cs">
+    <Compile Include="Forms\F_Pesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Pesquisar.Designer.cs">
+    <Compile Include="Forms\F_Pesquisar.Designer.cs">
       <DependentUpon>F_Pesquisar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personal.cs" />
+    <Compile Include="class\Personal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pessoa.cs" />
-    <EmbeddedResource Include="F_Cadastro.resx">
+    <Compile Include="class\Pessoa.cs" />
+    <EmbeddedResource Include="Forms\F_Cadastro.resx">
       <DependentUpon>F_Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Excluir.resx">
+    <EmbeddedResource Include="Forms\F_Excluir.resx">
       <DependentUpon>F_Excluir.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Instrutor.resx">
+    <EmbeddedResource Include="Forms\F_Instrutor.resx">
       <DependentUpon>F_Instrutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Login.resx">
       <DependentUpon>F_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Pesquisar.resx">
+    <EmbeddedResource Include="Forms\F_Pesquisar.resx">
       <DependentUpon>F_Pesquisar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

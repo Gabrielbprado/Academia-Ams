@@ -43,15 +43,18 @@ namespace Academia_AMS
                 {
                     F_Cadastro f_Cadastro = new F_Cadastro();
                     f_Cadastro.Show();
-                }
-                else
+                }else
                 {
+
                     MessageBox.Show("Usuário ou Senha Inválidos");
+                    txt_cpf.Focus();
                 }
+               
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show($"Ocorreu um erro: {ex.Message}");
+                MessageBox.Show("Usuário ou Senha Inválidos");
+                txt_cpf.Focus();
             }
 
 

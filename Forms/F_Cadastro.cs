@@ -12,8 +12,8 @@ namespace Academia_AMS
 {
     public partial class F_Cadastro : Form
     {
-       Banco banco = new Banco();
-        Pessoa usuario = new Pessoa();
+       private Banco banco = new Banco();
+        private Pessoa usuario = new Pessoa();
         public F_Cadastro()
         {
             InitializeComponent();
@@ -24,14 +24,15 @@ namespace Academia_AMS
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
-            
+               
+                DateTime diaHoje = DateTime.Today;
             usuario.T_NAME = txt_Nome.Text;
             
             usuario.T_HORARIO = txt_Horario.Text;
-            usuario.N_DATA = int.Parse(txt_Data.Text);
-            usuario.N_CPF = int.Parse(txt_Cpf.Text);
+            usuario.N_DATA = txt_Data.Text;
+            usuario.N_CPF = long.Parse(txt_Cpf.Text);
             usuario.T_OBS = txt_Obs.Text;
-            usuario.N_TELEFONE = int.Parse(txt_Id.Text);
+            usuario.N_TELEFONE = long.Parse(txt_Telefone.Text);
 
             banco.NovoUsuario(usuario);
             Banco.OpenConnection(Pessoa.bancoUsuario).Close();
@@ -49,17 +50,9 @@ namespace Academia_AMS
     
 
         private void btn_Excluir_Click(object sender, EventArgs e)
-        {
-           
-                if (int.TryParse(txt_Cpf.Text, out int cpf))
-                {
+        {             
                     F_Excluir f_Excluir = new F_Excluir();
                     f_Excluir.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, insira um CPF válido.");
-                }
             }
 
         private void btn_Sair_Click(object sender, EventArgs e)
