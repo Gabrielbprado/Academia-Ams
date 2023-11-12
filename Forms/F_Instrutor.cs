@@ -1,4 +1,4 @@
-﻿using Academia_AMS.Forms;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,10 +49,6 @@ namespace Academia_AMS
             Application.Exit();
         }
 
-        private void btn_Excluir_Click(object sender, EventArgs e)
-        {
-            F_ExcluirInstrutor f_Excluir = new F_ExcluirInstrutor();
-            f_Excluir.Show();
-        }
+        
     }
 }
