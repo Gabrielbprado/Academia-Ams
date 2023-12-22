@@ -51,3 +51,27 @@ C:\Users\pc\Downloads\Academia_AMS\Academia AMS\bin\Debug\EntityFramework.xml
 C:\Users\pc\Downloads\Academia_AMS\Academia AMS\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\pc\Downloads\Academia_AMS\Academia AMS\bin\Debug\System.Data.SQLite.xml
 C:\Users\pc\Downloads\Academia_AMS\Academia AMS\obj\Debug\Academia AMS.csproj.CopyComplete
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\Academia AMS.exe.config
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\Academia AMS.exe
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\Academia AMS.pdb
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\EntityFramework.dll
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\System.Data.SQLite.dll
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\EntityFramework.xml
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\System.Data.SQLite.xml
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia AMS.csproj.AssemblyReference.cache
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia_AMS.F_Cadastro.resources
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia_AMS.F_Excluir.resources
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia_AMS.F_Instrutor.resources
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia_AMS.F_Login.resources
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia_AMS.F_Pesquisar.resources
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia_AMS.Properties.Resources.resources
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia AMS.csproj.GenerateResource.cache
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia AMS.csproj.CoreCompileInputs.cache
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia AMS.csproj.CopyComplete
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia AMS.exe
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\obj\Debug\Academia AMS.pdb
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\x86\sqlite3.dll
+C:\Users\pc\Source\Repos\Gabrielbprado\Academia-Ams-SQL\bin\Debug\x64\sqlite3.dll
